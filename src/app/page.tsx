@@ -9,7 +9,7 @@ export default function Home() {
         <Link href="/login" className="rounded bg-black px-4 py-2 text-white">
           Entrar
         </Link>
-        <Link href="/cadastro" className="rounded border px-4 py-2">
+        <Link href="/cadastro" className="rounded border border-gray-300 px-4 py-2 text-gray-900 dark:border-gray-600 dark:text-white">
           Criar conta
         </Link>
       </div>
