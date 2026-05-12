@@ -54,8 +54,12 @@ export const propostasRepo = {
     return data;
   },
 
-  async remover(supabase: Client, id: string): Promise<void> {
-    const { error } = await supabase.from("propostas").delete().eq("id", id);
+  async remover(supabase: Client, id: string): Promise<boolean> {
+    const { error, count } = await supabase
+      .from("propostas")
+      .delete({ count: "exact" })
+      .eq("id", id);
     if (error) throw error;
+    return (count ?? 0) > 0;
   },
 };

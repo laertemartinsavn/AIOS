@@ -42,6 +42,7 @@ export const transcricoesService = {
   },
 
   async remover(supabase: Client, id: string) {
-    await transcricoesRepo.remover(supabase, id);
+    const ok = await transcricoesRepo.remover(supabase, id);
+    if (!ok) throw new AppError("NOT_FOUND", "Transcrição não encontrada");
   },
 };

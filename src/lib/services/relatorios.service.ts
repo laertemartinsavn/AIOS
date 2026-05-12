@@ -44,6 +44,7 @@ export const relatoriosService = {
   },
 
   async remover(supabase: Client, id: string) {
-    await relatoriosRepo.remover(supabase, id);
+    const ok = await relatoriosRepo.remover(supabase, id);
+    if (!ok) throw new AppError("NOT_FOUND", "Relatório não encontrado");
   },
 };

@@ -39,6 +39,7 @@ export const chamadasService = {
   },
 
   async remover(supabase: Client, id: string) {
-    await chamadasRepo.remover(supabase, id);
+    const ok = await chamadasRepo.remover(supabase, id);
+    if (!ok) throw new AppError("NOT_FOUND", "Chamada não encontrada");
   },
 };

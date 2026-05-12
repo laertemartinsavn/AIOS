@@ -44,6 +44,7 @@ export const propostasService = {
   },
 
   async remover(supabase: Client, id: string) {
-    await propostasRepo.remover(supabase, id);
+    const ok = await propostasRepo.remover(supabase, id);
+    if (!ok) throw new AppError("NOT_FOUND", "Proposta não encontrada");
   },
 };

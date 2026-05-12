@@ -53,8 +53,12 @@ export const chamadasRepo = {
     return data;
   },
 
-  async remover(supabase: Client, id: string): Promise<void> {
-    const { error } = await supabase.from("chamadas").delete().eq("id", id);
+  async remover(supabase: Client, id: string): Promise<boolean> {
+    const { error, count } = await supabase
+      .from("chamadas")
+      .delete({ count: "exact" })
+      .eq("id", id);
     if (error) throw error;
+    return (count ?? 0) > 0;
   },
 };
