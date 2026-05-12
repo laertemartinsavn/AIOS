@@ -5,9 +5,9 @@
 
 ## 1. Visão Geral
 
-AIOS é um sistema web cujo MVP recebe transcrições de calls (via Google Drive ou upload direto), gera um relatório sobre a call e cria uma proposta comercial com link externo.
+AIOS é um sistema web cujo MVP recebe transcrições de calls **coladas manualmente em um campo de texto**, gera um relatório sobre a call e cria uma proposta comercial com link externo.
 
-Esta spec cobre **apenas a estrutura inicial** (scaffold): autenticação, organização do backend, schema das entidades de domínio e preparação para deploy. As integrações reais (Google Drive, geração de relatório por IA, geração de proposta) ficam como TODOs claramente marcados no código.
+Esta spec cobre **apenas a estrutura inicial** (scaffold): autenticação, organização do backend, schema das entidades de domínio e preparação para deploy. As integrações reais (geração de relatório por IA, geração de proposta) ficam como TODOs claramente marcados no código. Integração com Google Drive está fora do MVP atual.
 
 ## 2. Stack Técnica
 
@@ -115,7 +115,6 @@ Todas as tabelas em snake_case; PK `id uuid default gen_random_uuid()`; `created
 | id           | uuid PK                                           |
 | user_id      | uuid → auth.users(id) ON DELETE CASCADE           |
 | titulo       | text NOT NULL                                     |
-| origem       | text CHECK (origem IN ('upload','google_drive'))  |
 | status       | text DEFAULT 'pendente'                           |
 | created_at   | timestamptz DEFAULT now()                         |
 
@@ -125,7 +124,6 @@ Todas as tabelas em snake_case; PK `id uuid default gen_random_uuid()`; `created
 | id           | uuid PK                                           |
 | chamada_id   | uuid → chamadas(id) ON DELETE CASCADE             |
 | conteudo     | text NOT NULL                                     |
-| origem_url   | text NULL                                         |
 | created_at   | timestamptz DEFAULT now()                         |
 
 ### `relatorios`
@@ -221,14 +219,13 @@ A criação efetiva do serviço fica para a próxima sessão quando o usuário f
 Marcado no código com `// TODO(integração):` e listado no README:
 1. **Credenciais Supabase** → rodar migrations, conectar app, testar auth end-to-end.
 2. **Credenciais Easypanel** → criar service, configurar env vars, deploy.
-3. **Google Drive** → integração de leitura de transcrições (entidade `transcricoes` já preparada).
-4. **Geração de relatório por IA** → service `relatorios` tem placeholder.
-5. **Geração de proposta + link externo** → service `propostas` tem placeholder.
+3. **Geração de relatório por IA** → service `relatorios` tem placeholder.
+4. **Geração de proposta + link externo** → service `propostas` tem placeholder.
 
 ## 12. Fora de Escopo (Não-Goals)
 
 - Lógica real de IA (geração de relatório/proposta).
-- Integração com Google Drive.
+- Integração com Google Drive (transcrição vem por colagem manual no MVP).
 - Sistema de billing/planos.
 - Painel administrativo / multi-tenant.
 - Testes automatizados (virão na fase de implementação de cada feature).
