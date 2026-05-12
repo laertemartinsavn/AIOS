@@ -9,7 +9,7 @@ function isPublic(pathname: string) {
   return PUBLIC_API_PREFIXES.some((p) => pathname.startsWith(p));
 }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { response, user } = await updateSession(request);
   const { pathname } = request.nextUrl;
 
