@@ -1,0 +1,9 @@
+{
+  "_comment": "Exemplo de config MCP para uso com Claude Code neste projeto. Copie para .mcp.json e substitua <SEU_PROJECT_REF> pelo ref do seu projeto Supabase (encontra em Dashboard → Project Settings → General → Reference ID).",
+  "mcpServers": {
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp?project_ref=<SEU_PROJECT_REF>"
+    }
+  }
+}

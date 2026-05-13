@@ -27,14 +27,25 @@ A IA pede apenas o necessário pra cada estágio. Não pedir tudo no início —
 
 ### Bloco A — Supabase (necessário a partir do Estágio 1)
 
-**Pré-requisito do cliente:** instalar o **MCP do Supabase no Claude** (uma vez, antes da primeira sessão de configuração). Passo a passo:
+**Pré-requisito do cliente:** instalar o **MCP do Supabase no Claude** (uma vez, antes da primeira sessão de configuração). Existem dois caminhos — usar o que combina com a interface que o cliente vai usar pra conversar com a IA:
 
+**Opção A — claude.ai (web/desktop):**
 1. Cliente vai a https://claude.ai → **Settings → Connectors**.
 2. **Add custom connector** → escolher Supabase (ou instalar via marketplace de MCPs).
 3. Fazer login na conta Supabase quando solicitado.
 4. Confirmar que o MCP aparece como ativo (`claude_ai_Supabase`).
 
-> **Verificação:** na próxima conversa com a IA, ela deve conseguir rodar `list_organizations` e ver as orgs do cliente. Se não conseguir, o MCP não está conectado nessa sessão — pedir pro cliente conferir Settings.
+**Opção B — Claude Code (CLI/IDE) usando `.mcp.json` do projeto:**
+1. Cliente copia o exemplo do projeto:
+   ```bash
+   cp .mcp.example.json .mcp.json
+   ```
+2. Abre `.mcp.json` e substitui `<SEU_PROJECT_REF>` pelo **Reference ID** do projeto Supabase do cliente (Dashboard → **Project Settings → General → Reference ID**).
+3. Reabre o Claude Code no diretório do projeto. Quando perguntar se confia no MCP server, aprovar.
+
+> O `.mcp.json` está no `.gitignore` — cada cliente mantém o seu, apontando pro próprio projeto Supabase.
+
+> **Verificação:** na próxima conversa com a IA, ela deve conseguir rodar `list_organizations` e ver as orgs do cliente. Se não conseguir, o MCP não está conectado nessa sessão — pedir pro cliente conferir Settings (Opção A) ou reabrir o Claude Code (Opção B).
 
 Com o MCP ativo, a IA tem acesso a: `list_projects`, `apply_migration`, `list_tables`, `generate_typescript_types`, `get_advisors`, `get_publishable_keys`, `get_project_url`, `execute_sql`, `create_project`, e mais.
 

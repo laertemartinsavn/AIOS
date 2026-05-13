@@ -43,3 +43,9 @@ next-env.d.ts
 
 # estado local da instalação (cada cliente mantém o próprio; ver configuracao-estado-example.md)
 configuracao-estado.md
+
+# config MCP do projeto — cada cliente aponta pro próprio Supabase project_ref; ver .mcp.example.json
+.mcp.json
+
+# settings locais do Claude Code (preferências/permissões da máquina; nunca compartilhar)
+.claude/settings.local.json
