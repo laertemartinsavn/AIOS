@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import {
   Table,
@@ -17,6 +20,8 @@ type Linha = Chamada & {
 };
 
 export function ListaChamadas({ chamadas }: { chamadas: Linha[] }) {
+  const router = useRouter();
+
   if (chamadas.length === 0) {
     return (
       <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed border-border bg-card py-12 text-center">
@@ -40,38 +45,46 @@ export function ListaChamadas({ chamadas }: { chamadas: Linha[] }) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {chamadas.map((c) => (
-          <TableRow key={c.id} className="cursor-pointer">
-            <TableCell>
-              <Link
-                href={`/dashboard/chamadas/${c.id}`}
-                className="font-medium hover:underline"
-              >
-                {c.titulo}
-              </Link>
-            </TableCell>
-            <TableCell>
-              <Badge variant="outline">{c.status}</Badge>
-            </TableCell>
-            <TableCell>
-              {c.tem_relatorio ? (
-                <Badge variant="default">gerada</Badge>
-              ) : (
-                <span className="text-xs text-muted-foreground">—</span>
-              )}
-            </TableCell>
-            <TableCell>
-              {c.tem_proposta ? (
-                <Badge variant="secondary">gerada</Badge>
-              ) : (
-                <span className="text-xs text-muted-foreground">—</span>
-              )}
-            </TableCell>
-            <TableCell className="text-right text-muted-foreground">
-              {formatarData(c.created_at)}
-            </TableCell>
-          </TableRow>
-        ))}
+        {chamadas.map((c) => {
+          const href = `/dashboard/chamadas/${c.id}`;
+          return (
+            <TableRow
+              key={c.id}
+              onClick={() => router.push(href)}
+              className="cursor-pointer transition-colors hover:bg-muted/60"
+            >
+              <TableCell>
+                <Link
+                  href={href}
+                  className="font-medium outline-none focus-visible:underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {c.titulo}
+                </Link>
+              </TableCell>
+              <TableCell>
+                <Badge variant="outline">{c.status}</Badge>
+              </TableCell>
+              <TableCell>
+                {c.tem_relatorio ? (
+                  <Badge variant="default">gerada</Badge>
+                ) : (
+                  <span className="text-xs text-muted-foreground">—</span>
+                )}
+              </TableCell>
+              <TableCell>
+                {c.tem_proposta ? (
+                  <Badge variant="secondary">gerada</Badge>
+                ) : (
+                  <span className="text-xs text-muted-foreground">—</span>
+                )}
+              </TableCell>
+              <TableCell className="text-right text-muted-foreground">
+                {formatarData(c.created_at)}
+              </TableCell>
+            </TableRow>
+          );
+        })}
       </TableBody>
     </Table>
   );
