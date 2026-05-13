@@ -17,12 +17,15 @@ export async function TopNav() {
           {user?.email && (
             <span className="text-muted-foreground">{user.email}</span>
           )}
-          <Link
-            href="/sair"
-            className="text-muted-foreground underline-offset-4 hover:underline"
-          >
-            Sair
-          </Link>
+          {/* form POST evita que prefetch de Link dispare signOut acidental */}
+          <form action="/sair" method="POST">
+            <button
+              type="submit"
+              className="text-muted-foreground underline-offset-4 hover:underline"
+            >
+              Sair
+            </button>
+          </form>
         </div>
       </div>
     </header>

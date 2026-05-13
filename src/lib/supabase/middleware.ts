@@ -27,16 +27,9 @@ export async function updateSession(request: NextRequest) {
     },
   );
 
-  const { data, error } = await supabase.auth.getUser();
-  const user = data.user;
-
-  if (!user) {
-    console.log(
-      `[updateSession] no user. error=${error?.message ?? "none"} code=${
-        error?.code ?? "?"
-      } status=${error?.status ?? "?"}`,
-    );
-  }
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
   return { response, user };
 }

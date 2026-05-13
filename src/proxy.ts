@@ -10,19 +10,8 @@ function isPublic(pathname: string) {
 }
 
 export async function proxy(request: NextRequest) {
-  const cookieNames = request.cookies.getAll().map((c) => c.name);
-  const rawCookieHeader = request.headers.get("cookie") ?? "";
-  const rscQuery = request.nextUrl.searchParams.get("_rsc");
-
   const { response, user } = await updateSession(request);
   const { pathname } = request.nextUrl;
-
-  // Log temporário pra diagnosticar auth em produção. Remover depois de estabilizar.
-  console.log(
-    `[proxy] ${pathname} rsc=${rscQuery ?? "no"} user=${
-      user?.email ?? "null"
-    } cookieNames=[${cookieNames.join(",")}] rawCookieLen=${rawCookieHeader.length}`,
-  );
 
   if (isPublic(pathname)) return response;
 
