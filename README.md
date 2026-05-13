@@ -3,7 +3,15 @@
 Sistema operacional de IA — MVP para ler transcrições de calls, gerar relatórios e propostas comerciais.
 
 > **Configurando este projeto pela primeira vez (ou retomando uma instalação)?**
-> Comece por **[`configuracao.md`](./configuracao.md)** (playbook) e **[`configuracao-estado.md`](./configuracao-estado.md)** (checklist do progresso atual).
+> Comece por **[`configuracao.md`](./configuracao.md)** (playbook fixo, faz parte do template).
+>
+> Em seguida, crie seu **estado local** de instalação a partir do exemplo:
+>
+> ```bash
+> cp configuracao-estado-example.md configuracao-estado.md
+> ```
+>
+> O `configuracao-estado.md` é **gitignored** — cada cliente mantém o próprio progresso, decisões e histórico sem interferir nas atualizações futuras do template.
 
 ## Stack
 

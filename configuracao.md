@@ -5,13 +5,19 @@
 > - **Supabase** — via **MCP** instalado pelo cliente na sua sessão Claude (`claude_ai_Supabase`). A IA aplica migration, configura auth, regera tipos. O cliente não toca em SQL Editor nem copia chaves.
 > - **Easypanel** — via **API HTTP** com token fornecido pelo cliente. A IA cria projeto, service, build args, env vars e dispara deploy.
 
-**Use sempre junto com `configuracao-estado.md`** — esse outro arquivo registra o que já foi feito e qual o próximo passo. Uma sessão de IA retomando a instalação deve:
+**Use sempre junto com `configuracao-estado.md`** — esse outro arquivo registra o que já foi feito e qual o próximo passo. Ele é **local de cada instalação** (gitignored). Ao clonar o template pela primeira vez, copie o exemplo:
+
+```bash
+cp configuracao-estado-example.md configuracao-estado.md
+```
+
+Uma sessão de IA retomando a instalação deve:
 
 1. Ler `configuracao-estado.md` primeiro pra ver onde paramos.
 2. Identificar o próximo item `[ ]` (não feito).
 3. Executar conforme a seção correspondente neste arquivo.
 4. **Marcar `[x]` em `configuracao-estado.md`** e atualizar "Próximo passo" + "Última ação".
-5. Commitar a mudança (`docs(estado): <resumo>`).
+5. Commitar **apenas em commits locais do cliente** (esse arquivo não vai para o template upstream).
 
 ---
 

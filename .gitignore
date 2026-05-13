@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# estado local da instalação (cada cliente mantém o próprio; ver configuracao-estado-example.md)
+configuracao-estado.md
