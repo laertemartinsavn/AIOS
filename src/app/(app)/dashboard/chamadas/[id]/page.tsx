@@ -7,6 +7,9 @@ import { chamadasService } from "@/lib/services/chamadas.service";
 import { relatoriosService } from "@/lib/services/relatorios.service";
 import { propostasService } from "@/lib/services/propostas.service";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 type Props = { params: Promise<{ id: string }> };
 
 export default async function ChamadaDetalhePage({ params }: Props) {

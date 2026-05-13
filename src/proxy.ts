@@ -13,6 +13,14 @@ export async function proxy(request: NextRequest) {
   const { response, user } = await updateSession(request);
   const { pathname } = request.nextUrl;
 
+  // Log temporário pra diagnosticar auth em produção. Remover depois de estabilizar.
+  console.log(
+    `[proxy] ${pathname} user=${user?.email ?? "null"} cookies=${request.cookies
+      .getAll()
+      .map((c) => c.name)
+      .join(",")}`,
+  );
+
   if (isPublic(pathname)) return response;
 
   if (!user) {
@@ -24,7 +32,13 @@ export async function proxy(request: NextRequest) {
     }
     const url = request.nextUrl.clone();
     url.pathname = "/login";
-    return NextResponse.redirect(url);
+    const redirectResponse = NextResponse.redirect(url);
+    // Propaga cookies que o updateSession refrescou (sem isso o redirect
+    // descarta o refresh e a sessão "morre" mais rápido do que precisa).
+    response.cookies.getAll().forEach((c) => {
+      redirectResponse.cookies.set(c);
+    });
+    return redirectResponse;
   }
 
   return response;
