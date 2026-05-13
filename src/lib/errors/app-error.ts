@@ -35,8 +35,17 @@ export function errorResponse(err: unknown) {
   }
 
   console.error("Unhandled error:", err);
+
+  const isDev = process.env.NODE_ENV !== "production";
+  const message =
+    isDev && err instanceof Error ? err.message : "Erro interno";
+  const details =
+    isDev && err instanceof Error
+      ? { name: err.name, stack: err.stack?.split("\n").slice(0, 8) }
+      : undefined;
+
   return NextResponse.json(
-    { error: { code: "INTERNAL_ERROR", message: "Erro interno" } },
+    { error: { code: "INTERNAL_ERROR", message, details } },
     { status: 500 },
   );
 }

@@ -119,7 +119,6 @@ export async function analisarCall(
   const response = await client.messages.create({
     model: SONNET_4_6,
     max_tokens: 16000,
-    thinking: { type: "adaptive" },
     output_config: { effort: "medium" },
     system: [
       {
