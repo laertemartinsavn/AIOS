@@ -46,6 +46,13 @@ export type ConteudoSecoes = {
   cronograma?: string | null;
 };
 
+export type PerfilSelecionado = {
+  perfil: string;       // nome como aparece na coluna "Perfil" do ratecard
+  quantidade: number;   // número de profissionais
+  horas_mensais: number; // horas/mês por profissional (168 = full-time, 84 = 50%)
+  meses: number;        // duração em meses
+};
+
 export type GerarPropostaOutput = {
   link_externo: string;
   status?: "rascunho" | "enviada" | "em_negociacao" | "aceita" | "rejeitada" | "expirada";
@@ -58,6 +65,7 @@ export type GerarPropostaOutput = {
   prazo_entrega_dias?: number;
   validade_dias?: number;
   versao?: number;
+  perfis_selecionados?: PerfilSelecionado[];
   conteudo_secoes?: ConteudoSecoes;
 };
 
@@ -68,18 +76,28 @@ Sua tarefa é criar uma proposta comercial COMPLETA usando os screenshots do mod
 ═══════════════════════════════════════════════════
 REGRA ABSOLUTA — VALORES DO INVESTIMENTO
 ═══════════════════════════════════════════════════
-1. TODA tarifa (R$/hora ou R$/mês) DEVE vir da tabela de ratecard fornecida. PONTO FINAL.
-2. NUNCA invente, estime, sugira ou arredonde um valor que não esteja na tabela.
-3. NUNCA use valores de memória ou treinamento — somente o ratecard desta mensagem.
-4. Para cada perfil que você precisar usar:
-   a. Procure o nome EXATO na coluna "Perfil" do ratecard.
-   b. Se não encontrar exato, procure um perfil SIMILAR (mesma função + mesma senioridade).
-   c. Se não encontrar nem similar → tarifa = R$ 0,00 para esse perfil. Não invente.
-5. Modalidade de atuação determina qual coluna usar:
-   - HOME OFFICE / REMOTO → use "R$/hora HO" e "R$/mês HO" (coluna B da planilha)
-   - HÍBRIDO / PRESENCIAL → use "R$/hora Híb" e "R$/mês Híb" (coluna D da planilha)
-   - Modalidade não informada → assuma HOME OFFICE.
-6. O campo valor_total deve ser o somatório calculado — nunca um valor inventado.
+TODAS as tarifas DEVEM vir da tabela de ratecard fornecida nesta mensagem. NUNCA invente ou use valores de treinamento.
+
+PROCESSO OBRIGATÓRIO — siga exatamente esta sequência:
+
+PASSO 1 — Identifique as necessidades do projeto (sem nomear perfis ainda):
+Com base no escopo, defina quais tipos de especialistas são necessários e em qual senioridade.
+Exemplos: "preciso de um consultor SAP com módulo FI/CO, sênior" ou "preciso de desenvolvedor fullstack, pleno".
+
+PASSO 2 — Leia a tabela do ratecard LINHA POR LINHA e selecione os perfis:
+PERCORRA a tabela fornecida e escolha as linhas que melhor correspondem às necessidades identificadas.
+Use o nome EXATO da coluna "Perfil" da linha escolhida — nunca crie nomes próprios.
+Se houver mais de uma opção próxima, escolha a que melhor representa o nível requerido.
+
+PASSO 3 — Determine as colunas de tarifa:
+- HOME OFFICE ou REMOTO → use colunas "R$/hora HO" e "R$/mês HO"
+- HÍBRIDO ou PRESENCIAL → use colunas "R$/hora Híb" e "R$/mês Híb"
+- Não informado → assuma HOME OFFICE
+
+PASSO 4 — Calcule:
+Para cada perfil selecionado: horas ou meses × tarifa da tabela = subtotal.
+Some todos os subtotais → valor_total.
+O valor_total DEVE ser diferente de zero se há perfis na tabela compatíveis com o projeto.
 ═══════════════════════════════════════════════════
 
 REGRA ABSOLUTA — SEM DUPLICIDADE E SEM SEÇÕES EXTRAS:
@@ -120,12 +138,10 @@ MAPEAMENTO SCREENSHOT → CAMPO (siga rigorosamente):
 
 CAMPOS SEM SCREENSHOT EQUIVALENTE NO MODELO SELECIONADO → preencha com null.
 
-CÁLCULO DO INVESTIMENTO — PASSO A PASSO:
-1. Leia o campo modalidade_atuacao → escolha a coluna correta (HO ou Híb).
-2. Liste os perfis necessários para o escopo.
-3. Para cada perfil: busque na tabela do ratecard. Encontrou? Use a tarifa exata. Não encontrou? R$ 0,00.
-4. Calcule: por hora → horas × tarifa/hora; por mês → meses × profissionais × tarifa/mês.
-5. Some todos os perfis → valor_total.
+CÁLCULO DO INVESTIMENTO:
+Siga os 4 passos da REGRA ABSOLUTA acima.
+Ao preencher o campo "investimento", mostre: nome do perfil (copiado da tabela), tarifa usada, horas/meses estimados e subtotal.
+O campo valor_total nunca pode ser zero se existe projeto definido — revise a seleção de perfis se o total calculado for zero.
 
 CONTEÚDO VARIÁVEL (adapte ao projeto):
 - Folha de rosto: nome do cliente, data atual, título do projeto, valor total.
@@ -224,12 +240,26 @@ const PROPOSTA_TOOL = {
         items: { type: "string" },
         description: "Lista dos principais entregáveis/módulos. Cada item uma linha curta.",
       },
-      valor_total: { type: "number", minimum: 0, description: "Valor total em BRL calculado a partir das tarifas do ratecard. NUNCA invente — use somente o somatório dos perfis encontrados na tabela. Se nenhum perfil foi localizado, use 0." },
+      valor_total: { type: "number", minimum: 0, description: "Deixe 0 — será calculado automaticamente pelo sistema a partir de perfis_selecionados." },
       moeda: { type: "string", description: "Código ISO 4217. Padrão BRL." },
       condicoes_pagamento: { type: "string", description: "Resumo das condições de pagamento para os metadados." },
       prazo_entrega_dias: { type: "integer", minimum: 0, description: "Dias úteis até entrega completa." },
       validade_dias: { type: "integer", minimum: 0, description: "Validade comercial da proposta." },
       versao: { type: "integer", minimum: 1, description: "Sempre 1." },
+      perfis_selecionados: {
+        type: "array",
+        description: "OBRIGATÓRIO. Lista dos perfis necessários para o projeto. O sistema calculará os valores monetários a partir daqui — NÃO coloque preços no campo investimento, apenas estrutura.",
+        items: {
+          type: "object",
+          properties: {
+            perfil: { type: "string", description: "Nome EXATO do perfil como aparece na lista do ratecard fornecida. Ex: 'Desenvolvedor FullStack Pleno', 'Gerente de Projetos Sênior'." },
+            quantidade: { type: "integer", description: "Número de profissionais deste perfil." },
+            horas_mensais: { type: "number", description: "Horas por mês por profissional. 168 = full-time, 84 = 50%, 80 = part-time (~50%)." },
+            meses: { type: "number", description: "Duração total em meses para este perfil." },
+          },
+          required: ["perfil", "quantidade", "horas_mensais", "meses"],
+        },
+      },
       conteudo_secoes: SECOES_SCHEMA,
     },
     required: ["link_externo", "titulo", "resumo_solucao", "conteudo_secoes"],
@@ -398,10 +428,6 @@ function montarConteudo(
     intro += `\n\n[DOCUMENTOS DE CONTEXTO DO ESCOPO]\n${blocos}`;
   }
 
-  if (ratecard) {
-    intro += `\n\n[RATECARD — USE PARA CALCULAR O VALOR DO INVESTIMENTO]\n${ratecard}`;
-  }
-
   if (modeloLabel) {
     intro += `\n\n[MODELO SELECIONADO: ${modeloLabel}]`;
   }
@@ -435,9 +461,17 @@ function montarConteudo(
     }
   }
 
+  // Ratecard inserido APÓS as screenshots para ficar mais próximo da geração
+  if (ratecard) {
+    blocks.push({
+      type: "text",
+      text: `\n\n════════════════════════════════════════\nRATECARD OFICIAL — LEIA AGORA ANTES DE CALCULAR O INVESTIMENTO\nTODAS as tarifas do campo "investimento" DEVEM vir das linhas abaixo. Copie os valores exatos.\n════════════════════════════════════════\n\n${ratecard}`,
+    });
+  }
+
   blocks.push({
     type: "text",
-    text: "\n\nGere a proposta comercial completa com todas as seções, usando os screenshots como base de conteúdo e o ratecard para calcular o valor do investimento.",
+    text: "\n\nGere a proposta comercial completa. Para o campo investimento: percorra as linhas do RATECARD acima, selecione as linhas adequadas ao projeto e copie os valores exatos das colunas R$/hora e R$/mês.",
   });
 
   return blocks;
@@ -488,7 +522,7 @@ export async function gerarProposta(input: {
   const stream = client.messages.stream({
     model: SONNET_4_6,
     max_tokens: 32000,
-    output_config: { effort: "medium" },
+    output_config: { effort: "high" },
     system: [
       {
         type: "text",
