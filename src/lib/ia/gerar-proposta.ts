@@ -74,30 +74,36 @@ const SYSTEM_PROMPT = `Você é um consultor comercial sênior da AVN Tecnologia
 Sua tarefa é criar uma proposta comercial COMPLETA usando os screenshots do modelo oficial AVN como texto base de cada seção, adaptando ao cliente e projeto identificados na call.
 
 ═══════════════════════════════════════════════════
-REGRA ABSOLUTA — VALORES DO INVESTIMENTO
+REGRA DO INVESTIMENTO — OBRIGATORIO PREENCHER perfis_selecionados
 ═══════════════════════════════════════════════════
-TODAS as tarifas DEVEM vir da tabela de ratecard fornecida nesta mensagem. NUNCA invente ou use valores de treinamento.
+NAO calcule precos manualmente. NAO coloque valores monetarios no campo "investimento".
+Sua responsabilidade é OBRIGATORIA e UNICA: preencher o campo "perfis_selecionados" com a lista de perfis necessarios.
+O sistema calculará todos os valores automaticamente com as tarifas exatas do ratecard.
 
-PROCESSO OBRIGATÓRIO — siga exatamente esta sequência:
+OBRIGATORIO: Sempre preencha "perfis_selecionados" com pelo menos 1 perfil (NUNCA deixe vazio).
 
-PASSO 1 — Identifique as necessidades do projeto (sem nomear perfis ainda):
-Com base no escopo, defina quais tipos de especialistas são necessários e em qual senioridade.
-Exemplos: "preciso de um consultor SAP com módulo FI/CO, sênior" ou "preciso de desenvolvedor fullstack, pleno".
+COMO PREENCHER perfis_selecionados (OBRIGATORIO — Nao ignore esta secao):
 
-PASSO 2 — Leia a tabela do ratecard LINHA POR LINHA e selecione os perfis:
-PERCORRA a tabela fornecida e escolha as linhas que melhor correspondem às necessidades identificadas.
-Use o nome EXATO da coluna "Perfil" da linha escolhida — nunca crie nomes próprios.
-Se houver mais de uma opção próxima, escolha a que melhor representa o nível requerido.
+1. Identifique os perfis: Com base na transcrição, escopo do projeto e necessidades, liste quais tipos de profissional são necessarios.
 
-PASSO 3 — Determine as colunas de tarifa:
-- HOME OFFICE ou REMOTO → use colunas "R$/hora HO" e "R$/mês HO"
-- HÍBRIDO ou PRESENCIAL → use colunas "R$/hora Híb" e "R$/mês Híb"
-- Não informado → assuma HOME OFFICE
+2. Use EXATAMENTE os nomes do ratecard: Para cada perfil, escolha o nome EXATO ou MAIS PROXIMO da coluna "Perfil" na aba.
+   Exemplos: "Desenvolvedor FullStack Pleno", "Gerente de Projetos Senior", "Analista SAP FI/CO"
 
-PASSO 4 — Calcule:
-Para cada perfil selecionado: horas ou meses × tarifa da tabela = subtotal.
-Some todos os subtotais → valor_total.
-O valor_total DEVE ser diferente de zero se há perfis na tabela compatíveis com o projeto.
+3. Preencha os 4 campos obrigatorios para CADA perfil:
+   - perfil: nome exato do ratecard
+   - quantidade: numero de profissionais (ex: 2)
+   - horas_mensais: horas/mes por profissional (168 = Full-time, 84 = Part-time 50%)
+   - meses: duracao total em meses (ex: 6)
+
+4. Sempre preencha com dados reais do projeto conforme identificado na transcrição.
+
+5. Se o projeto for SQUAD: inclua MULTIPLOS perfis (desenvolvedores, QA, DevOps, etc).
+
+6. Valor_total deixe como 0 — será calculado automaticamente pelo sistema.
+
+COMO PREENCHER o campo "investimento" (texto da secao):
+Escreva apenas a estrutura narrativa: descricao das fases, criterios de aceite, condicoes de faturamento e validade.
+NAO inclua tabelas de precos nem valores monetarios — eles serão inseridos automaticamente.
 ═══════════════════════════════════════════════════
 
 REGRA ABSOLUTA — SEM DUPLICIDADE E SEM SEÇÕES EXTRAS:
@@ -138,10 +144,9 @@ MAPEAMENTO SCREENSHOT → CAMPO (siga rigorosamente):
 
 CAMPOS SEM SCREENSHOT EQUIVALENTE NO MODELO SELECIONADO → preencha com null.
 
-CÁLCULO DO INVESTIMENTO:
-Siga os 4 passos da REGRA ABSOLUTA acima.
-Ao preencher o campo "investimento", mostre: nome do perfil (copiado da tabela), tarifa usada, horas/meses estimados e subtotal.
-O campo valor_total nunca pode ser zero se existe projeto definido — revise a seleção de perfis se o total calculado for zero.
+INVESTIMENTO:
+Preencha "perfis_selecionados" com os perfis e horas estimadas.
+No campo "investimento" (texto da seção), escreva apenas a estrutura narrativa: fases do projeto, critérios de aceite, condições de faturamento e validade da proposta. Sem tabelas de preço, sem valores — o sistema os insere depois.
 
 CONTEÚDO VARIÁVEL (adapte ao projeto):
 - Folha de rosto: nome do cliente, data atual, título do projeto, valor total.
@@ -170,6 +175,18 @@ Modalidade: CLT · Regime: Home Office
 
 IDIOMA: Português brasileiro formal, tom profissional e direto.
 STATUS: Sempre "rascunho". VERSÃO: sempre 1. MOEDA: BRL.
+
+═══════════════════════════════════════════════════
+CHECKLIST FINAL OBRIGATORIO ANTES DE EXECUTAR:
+═══════════════════════════════════════════════════
+[OBRIGATORIO] perfis_selecionados: tem pelo menos 1 perfil? ( )
+[OBRIGATORIO] valor_total: deixado como 0? ( )
+[OBRIGATORIO] Para cada perfil: quantidade >= 1, horas_mensais >= 1, meses >= 1? ( )
+[OBRIGATORIO] Nenhum perfil deixado vazio ou nulo? ( )
+[OBRIGATORIO] conteudo_secoes.investimento: texto descritivo sem precos? ( )
+
+Se QUALQUER checkbox estiver desmarcado, volte e corrija ANTES de executar registrar_proposta.
+Envie EXATAMENTE UMA CHAMADA a registrar_proposta.
 
 Use a ferramenta registrar_proposta exatamente uma vez.`;
 
@@ -262,7 +279,7 @@ const PROPOSTA_TOOL = {
       },
       conteudo_secoes: SECOES_SCHEMA,
     },
-    required: ["link_externo", "titulo", "resumo_solucao", "conteudo_secoes"],
+    required: ["link_externo", "titulo", "resumo_solucao", "perfis_selecionados", "conteudo_secoes"],
   },
 };
 
@@ -270,64 +287,47 @@ type ContentBlock =
   | { type: "text"; text: string }
   | { type: "image"; source: { type: "base64"; media_type: "image/jpeg"; data: string } };
 
-const INVESTIMENTO_BODY_SHOP = `FORMATO OBRIGATÓRIO PARA O CAMPO investimento (modelo Body Shop):
-Use a coluna correta do ratecard (HO ou Híb conforme modalidade).
-Para CADA perfil: localize na tabela → use tarifa exata. Se não achar: R$ 0,00.
-
-VALOR MENSAL DA ALOCAÇÃO
-Gere uma tabela markdown:
-| Perfil | R$/hora | R$/mês (168h) | Qtde | Meses | Total |
-|--------|---------|----------------|------|-------|-------|
-| **Valor Total** | | | | | R$ X.XXX.000,00 |
-
+const INVESTIMENTO_BODY_SHOP = `CAMPO investimento (modelo Body Shop) — escreva APENAS:
 CONDIÇÕES DE FATURAMENTO
-[bullets do modelo: NF até dia 10, pagamento 30 dias, reajuste 30 dias de antecedência, substituição sem ônus]
+• O faturamento será realizado mensalmente, mediante emissão de nota fiscal até o dia 10 de cada mês de competência;
+• O pagamento deverá ser realizado em até 30 dias após a emissão da nota fiscal;
+• Eventuais reajustes após o período inicial poderão ser negociados com antecedência de 30 dias;
+• Em caso de afastamento do profissional por motivo de força maior, a AVN se compromete a substituí-lo em prazo a ser acordado entre as partes, sem ônus adicional.
 
 VALIDADE DA PROPOSTA
-Esta proposta possui validade de 30 dias a partir da data de sua emissão, podendo ser revisada após este período.`;
+Esta proposta possui validade de 30 dias a partir da data de sua emissão, podendo ser revisada após este período em função de disponibilidade do profissional ou alteração de condições comerciais.
+NÃO inclua tabelas de preço nem valores monetários — o sistema os insere automaticamente antes deste bloco.`;
 
-const INVESTIMENTO_SQUAD = `FORMATO OBRIGATÓRIO PARA O CAMPO investimento (modelo Squad Gerenciada):
-Use a coluna correta do ratecard (HO ou Híb conforme modalidade). Para perfis sem correspondência: R$ 0,00.
-
-EQUIPE SUGERIDA
-Gere uma tabela markdown:
-| Qtde | Perfil | Alocação | Qtde horas/mês |
-|------|--------|----------|----------------|
-
-VALOR MENSAL DA SQUAD
-O valor mensal para alocação da squad, conforme perfis e dedicações descritos nesta proposta, é de: R$ X.XXX.000,00 (extenso).
-O valor já inclui todos os tributos aplicáveis. Não estão inclusos eventuais custos de deslocamento, hospedagem e alimentação em caso de atuação presencial.
+const INVESTIMENTO_SQUAD = `CAMPO investimento (modelo Squad Gerenciada) — escreva APENAS:
+O valor já inclui todos os tributos aplicáveis. Não estão inclusos eventuais custos de deslocamento, hospedagem e alimentação em caso de atuação presencial, que serão de responsabilidade do cliente conforme política interna.
 
 CONDIÇÕES DE FATURAMENTO
-[bullets do modelo: NF até dia 10, pagamento 30 dias, reajuste 30 dias de antecedência, substituição sem ônus]
+• O faturamento será realizado mensalmente, mediante emissão de nota fiscal até o dia 10 de cada mês de competência;
+• O pagamento deverá ser realizado em até 30 dias após a emissão da nota fiscal;
+• Eventuais reajustes após o período inicial poderão ser negociados com antecedência de 30 dias;
+• Em caso de afastamento de profissional da squad por motivo de força maior, a AVN se compromete a substituí-lo em prazo a ser acordado entre as partes, sem ônus adicional.
 
 VALIDADE DA PROPOSTA
-Esta proposta possui validade de 30 dias a partir da data de sua emissão, podendo ser revisada após este período.`;
+Esta proposta possui validade de 30 dias a partir da data de sua emissão, podendo ser revisada após este período em função de disponibilidade dos profissionais ou alteração de condições comerciais.
+NÃO inclua tabelas de preço nem valores monetários — o sistema os insere automaticamente antes deste bloco.`;
 
-const INVESTIMENTO_PROJETO_SAP = `FORMATO OBRIGATÓRIO PARA O CAMPO investimento (modelo Projeto Fechado SAP):
-Use a coluna correta do ratecard. Para perfis sem correspondência: R$ 0,00.
-
-15. Investimento Previsto, Condições de Faturamento e Validade da Proposta
-O valor previsto para o projeto, considerando todas as etapas e serviços descritos nesta proposta, será de: R$ X.XXX.000,00 (extenso) já inclusos todos os tributos.
-
+const INVESTIMENTO_PROJETO_SAP = `CAMPO investimento (modelo Projeto Fechado SAP) — escreva APENAS:
 Condições de Faturamento
-O faturamento do projeto será realizado em [N] parcelas mensais, correspondentes a aproximadamente [%]% do valor total cada uma, alinhadas ao cronograma de execução. Cada faturamento será realizado mediante aprovação do racional de atividades. Após a aprovação, a emissão da nota fiscal ocorrerá até o dia 10 do mês subsequente.
+O faturamento do projeto será realizado em parcelas mensais alinhadas ao cronograma de execução do projeto. Cada faturamento será realizado mediante aprovação do racional de atividades e evolução do projeto enviado pela AVN. Após a aprovação, a emissão da nota fiscal ocorrerá até o dia 10 do mês subsequente à execução dos serviços.
 
 Validade da Proposta
-Esta proposta possui validade de 30 dias a partir da data de sua emissão, podendo ser revisada após este período.`;
+Esta proposta possui validade de 30 dias a partir da data de sua emissão, podendo ser revisada após este período em função de alterações de escopo, premissas, disponibilidade de recursos ou condições comerciais.
+NÃO inclua tabelas de preço nem valores monetários — o sistema os insere automaticamente antes deste bloco.`;
 
-const INVESTIMENTO_PROJETO_NAO_SAP = `FORMATO OBRIGATÓRIO PARA O CAMPO investimento (modelo Projeto Fechado Não SAP):
-Use a coluna correta do ratecard. Para perfis sem correspondência: R$ 0,00.
-
-[Descreva prazo/cronograma de sprints conforme o escopo. Em seguida:]
-O investimento para a execução dos serviços descritos nesta proposta é de: R$ X.XXX.000,00 (extenso).
+const INVESTIMENTO_PROJETO_NAO_SAP = `CAMPO investimento (modelo Projeto Fechado Não SAP) — escreva APENAS:
+Descreva o prazo/cronograma de sprints e as fases do projeto. Em seguida:
 
 CONDIÇÕES DE FATURAMENTO
-O faturamento será realizado em [N] parcelas vinculadas à aprovação formal de critérios de aceite por fase:
-[liste as parcelas com percentual, valor e critérios de aceite]
-As validações deverão ser realizadas em até 5 dias úteis. A homologação final em até 15 dias corridos. Na ausência de manifestação formal, a entrega será considerada automaticamente homologada. Após aprovação, NF até dia 10 com vencimento em 30 dias.
+O faturamento será realizado em parcelas vinculadas à aprovação formal de critérios de aceite por fase. Descreva as parcelas com percentual e critérios de aceite de cada uma (baseado no número de sprints do projeto).
+As validações deverão ser realizadas em até 5 (cinco) dias úteis após sua disponibilização. A homologação final deverá ocorrer em até 15 (quinze) dias corridos. Na ausência de manifestação formal dentro do prazo estabelecido, a entrega será considerada automaticamente homologada. Após a aprovação, a emissão da nota fiscal ocorrerá até o dia 10 do mês subsequente, com vencimento em 30 dias.
 
-Esta proposta tem validade de 30 dias.`;
+Esta proposta tem validade de 30 dias.
+NÃO inclua tabelas de preço nem valores monetários — o sistema os insere automaticamente antes deste bloco.`;
 
 function investimentoInstrucao(modeloId?: string): string {
   if (modeloId === "body-shop") return INVESTIMENTO_BODY_SHOP;
@@ -522,7 +522,6 @@ export async function gerarProposta(input: {
   const stream = client.messages.stream({
     model: SONNET_4_6,
     max_tokens: 32000,
-    output_config: { effort: "high" },
     system: [
       {
         type: "text",
