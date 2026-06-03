@@ -1,0 +1,50 @@
+/* ============================================================
+   Print styles — hide chrome, optimize content for paper
+   Applied via <link rel="stylesheet" href="assets/print.css" media="print">
+   ============================================================ */
+
+@page { size: A4; margin: 18mm 16mm; }
+
+@media print {
+  html, body { background: #fff !important; }
+  .app { display: block !important; height: auto !important; }
+
+  /* Hide all UI chrome */
+  .side, .top, .page__head-actions, .actions, .modal-backdrop,
+  #tweaks-root, .tweaks-host, [data-no-print] {
+    display: none !important;
+  }
+
+  .main { overflow: visible !important; height: auto !important; }
+  .page { padding: 0 !important; gap: 14px !important; }
+
+  /* Single column for detail layouts */
+  .detail { grid-template-columns: 1fr !important; }
+  .detail__aside { display: contents !important; }
+
+  /* Cards: flatten — no shadows, full width */
+  .section, .card, .kpi, .hero, .bant {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    border: 1px solid #DDD !important;
+  }
+  .hero {
+    background: #1F2255 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .hero * { color: inherit !important; }
+
+  /* Force-print colors for chips, badges, charts */
+  .sent, .status, .tag, .kpi__delta, .funnel__bar-fill,
+  .donut path, .donut circle, .area-this, .line-this,
+  .bar-actual, .bar-budget, .scope__n, .bant__lab .ic, .checklist__check.is-done {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Page-break helpers */
+  .page-break { page-break-before: always; }
+  h2, h3 { page-break-after: avoid; }
+}

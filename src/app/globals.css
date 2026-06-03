@@ -7,9 +7,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-brand: var(--font-montserrat);
+  --font-heading: var(--font-montserrat);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,72 +50,71 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+  /* ============================================================
+     AVN Tecnologia — Paleta de cores
+     ============================================================ */
+  --avn-blue-900: #1F2255;
+  --avn-blue-800: #2D316F;
+  --avn-blue-700: #3D4392;
+  --avn-blue-600: #5258AB;
+  --avn-blue-500: #6D72BD;
+  --avn-blue-400: #9296D2;
+  --avn-blue-300: #B9BCE2;
+  --avn-blue-200: #D8DAF0;
+  --avn-blue-100: #EBECF7;
+  --avn-blue-050: #F4F5FB;
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --avn-orange:     #F28B3A;
+  --avn-orange-100: #FCE5D1;
+  --avn-cyan:       #09A9E2;
+  --avn-cyan-100:   #D2EEF9;
+  --avn-success:    #4CA67A;
+  --avn-danger:     #C8423D;
+
+  /* Semantic foreground / border */
+  --fg-1:    var(--avn-blue-900);
+  --fg-2:    #44464A;
+  --fg-3:    #797C7F;
+  --fg-mute: #A9ABAE;
+  --border-1: var(--avn-blue-200);
+
+  /* ============================================================
+     Mapeamento shadcn → AVN
+     ============================================================ */
+  --background:            var(--avn-blue-050);
+  --foreground:            var(--avn-blue-900);
+  --card:                  #FEFEFE;
+  --card-foreground:       var(--avn-blue-900);
+  --popover:               #FEFEFE;
+  --popover-foreground:    var(--avn-blue-900);
+  --primary:               var(--avn-blue-700);
+  --primary-foreground:    #FEFEFE;
+  --secondary:             var(--avn-blue-100);
+  --secondary-foreground:  var(--avn-blue-700);
+  --muted:                 var(--avn-blue-100);
+  --muted-foreground:      #797C7F;
+  --accent:                var(--avn-blue-100);
+  --accent-foreground:     var(--avn-blue-900);
+  --destructive:           var(--avn-danger);
+  --border:                var(--avn-blue-200);
+  --input:                 var(--avn-blue-200);
+  --ring:                  var(--avn-blue-700);
+  --radius:                0.5rem;
+
+  --chart-1: var(--avn-blue-700);
+  --chart-2: var(--avn-cyan);
+  --chart-3: var(--avn-orange);
+  --chart-4: var(--avn-success);
+  --chart-5: var(--avn-danger);
+
+  --sidebar:                  var(--avn-blue-900);
+  --sidebar-foreground:       rgba(255, 255, 255, 0.78);
+  --sidebar-primary:          var(--avn-blue-700);
+  --sidebar-primary-foreground: #FEFEFE;
+  --sidebar-accent:           rgba(255, 255, 255, 0.06);
+  --sidebar-accent-foreground: #FEFEFE;
+  --sidebar-border:           rgba(255, 255, 255, 0.10);
+  --sidebar-ring:             var(--avn-blue-700);
 }
 
 @layer base {
@@ -123,6 +123,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-weight: 300;
   }
   html {
     @apply font-sans;

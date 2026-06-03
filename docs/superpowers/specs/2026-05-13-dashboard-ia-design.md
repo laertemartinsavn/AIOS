@@ -33,7 +33,7 @@ Todas em `(app)` (protegidas pelo proxy).
 ### 3.2 `/dashboard/chamadas/nova`
 - Form simples num card:
   - Input **Título** (required, max 200).
-  - Textarea **Transcrição da call** (required, min 1 char, sem max hard — limite real é o do modelo).
+  - Textarea **Transcrição** (required, min 1 char, sem max hard — limite real é o do modelo).
   - Botões: **Cancelar** (volta pra /dashboard) e **Salvar e analisar** (primary).
 - Ao submeter:
   - Disable todos os controls + texto "Analisando transcrição com IA... (pode levar até 30s)".

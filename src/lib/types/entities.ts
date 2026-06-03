@@ -17,3 +17,6 @@ export type AtualizaRelatorio = T["relatorios"]["Update"];
 export type Proposta = T["propostas"]["Row"];
 export type NovaProposta = T["propostas"]["Insert"];
 export type AtualizaProposta = T["propostas"]["Update"];
+
+export type Documento = T["documentos"]["Row"];
+export type NovoDocumento = T["documentos"]["Insert"];

@@ -16,7 +16,7 @@ export function StatsCards({
 }: Props) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      <StatCard label="Chamadas" valor={total.toString()} />
+      <StatCard label="Análises" valor={total.toString()} />
       <StatCard label="Analisadas" valor={analisadas.toString()} />
       <StatCard label="Propostas" valor={propostas.toString()} />
       <StatCard label="Valor estimado total" valor={formatarBRL(valorEstimadoTotal)} />

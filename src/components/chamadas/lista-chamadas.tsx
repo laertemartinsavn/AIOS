@@ -12,7 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import type { Chamada } from "@/lib/types/entities";
-import { formatarData } from "@/lib/ui/cores";
+import { corStatusChamada, formatarData } from "@/lib/ui/cores";
 
 type Linha = Chamada & {
   tem_relatorio: boolean;
@@ -25,9 +25,9 @@ export function ListaChamadas({ chamadas }: { chamadas: Linha[] }) {
   if (chamadas.length === 0) {
     return (
       <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed border-border bg-card py-12 text-center">
-        <p className="text-sm font-medium">Nenhuma chamada ainda.</p>
+        <p className="text-sm font-medium">Nenhuma análise ainda.</p>
         <p className="text-sm text-muted-foreground">
-          Clique em <span className="font-medium">+ Nova chamada</span> para começar.
+          Clique em <span className="font-medium">+ Nova análise</span> para começar.
         </p>
       </div>
     );
@@ -63,7 +63,7 @@ export function ListaChamadas({ chamadas }: { chamadas: Linha[] }) {
                 </Link>
               </TableCell>
               <TableCell>
-                <Badge variant="outline">{c.status}</Badge>
+                <Badge variant={corStatusChamada(c.status)}>{c.status}</Badge>
               </TableCell>
               <TableCell>
                 {c.tem_relatorio ? (

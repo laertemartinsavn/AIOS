@@ -1,3 +1,11 @@
+export function corStatusChamada(
+  status: string | null | undefined,
+): "default" | "secondary" | "destructive" | "outline" {
+  if (status === "analisada") return "default";
+  if (status === "erro") return "destructive";
+  return "outline";
+}
+
 export function corSentimento(
   sentimento: string | null | undefined,
 ): "default" | "secondary" | "destructive" | "outline" {

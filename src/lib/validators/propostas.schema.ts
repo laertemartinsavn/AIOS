@@ -22,6 +22,8 @@ const propostaBaseSchema = z.object({
   validade_dias: z.number().int().nonnegative().optional(),
   enviada_em: z.string().datetime().optional(),
   versao: z.number().int().min(1).optional(),
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  conteudo_secoes: z.any().optional(),
 });
 
 export const criarPropostaSchema = propostaBaseSchema.extend({

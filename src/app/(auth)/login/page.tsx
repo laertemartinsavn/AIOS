@@ -4,6 +4,15 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -26,7 +35,7 @@ export default function LoginPage() {
     setCarregando(false);
 
     if (error) {
-      setErro(error.message);
+      setErro("Email ou senha incorretos.");
       return;
     }
     router.push("/dashboard");
@@ -35,39 +44,51 @@ export default function LoginPage() {
 
   return (
     <main className="flex min-h-screen items-center justify-center p-6">
-      <form onSubmit={aoEnviar} className="w-full max-w-sm space-y-4 rounded border p-6">
-        <h1 className="text-2xl font-bold">Entrar</h1>
-        <input
-          type="email"
-          placeholder="email@exemplo.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="w-full rounded border px-3 py-2"
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-          required
-          className="w-full rounded border px-3 py-2"
-        />
-        {erro && <p className="text-sm text-red-600">{erro}</p>}
-        <button
-          type="submit"
-          disabled={carregando}
-          className="w-full rounded bg-black px-4 py-2 text-white disabled:opacity-50"
-        >
-          {carregando ? "Entrando..." : "Entrar"}
-        </button>
-        <p className="text-sm text-gray-600">
-          Sem conta?{" "}
-          <Link href="/cadastro" className="underline">
-            Criar agora
-          </Link>
-        </p>
-      </form>
+      <Card className="w-full max-w-sm">
+        <CardHeader>
+          <CardTitle className="text-2xl">Entrar</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <form onSubmit={aoEnviar} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="email@exemplo.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={carregando}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="senha">Senha</Label>
+              <Input
+                id="senha"
+                type="password"
+                placeholder="••••••••"
+                value={senha}
+                onChange={(e) => setSenha(e.target.value)}
+                required
+                disabled={carregando}
+              />
+            </div>
+            {erro && (
+              <p className="text-sm text-destructive">{erro}</p>
+            )}
+            <Button type="submit" className="w-full" disabled={carregando}>
+              {carregando ? "Entrando..." : "Entrar"}
+            </Button>
+            <p className="text-center text-sm text-muted-foreground">
+              Sem conta?{" "}
+              <Link href="/cadastro" className="underline underline-offset-4 hover:text-foreground">
+                Criar agora
+              </Link>
+            </p>
+          </form>
+        </CardContent>
+      </Card>
     </main>
   );
 }

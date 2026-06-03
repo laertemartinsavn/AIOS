@@ -21,8 +21,6 @@ export const relatoriosService = {
     return r;
   },
 
-  // TODO(integração): gerar `conteudo` e KPIs a partir da transcrição com IA.
-  // Por enquanto recebe tudo pronto pelo body (chamada_id + conteudo + KPIs opcionais).
   async criar(supabase: Client, input: CriarRelatorioInput) {
     const chamada = await chamadasRepo.obter(supabase, input.chamada_id);
     if (!chamada) throw new AppError("NOT_FOUND", "Chamada não encontrada");

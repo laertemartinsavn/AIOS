@@ -38,10 +38,52 @@ export type Database = {
         }
         Relationships: []
       }
+      documentos: {
+        Row: {
+          chamada_id: string
+          conteudo_texto: string | null
+          created_at: string
+          id: string
+          nome_arquivo: string
+          storage_path: string
+          tamanho_bytes: number
+          tipo_mime: string
+        }
+        Insert: {
+          chamada_id: string
+          conteudo_texto?: string | null
+          created_at?: string
+          id?: string
+          nome_arquivo: string
+          storage_path: string
+          tamanho_bytes: number
+          tipo_mime: string
+        }
+        Update: {
+          chamada_id?: string
+          conteudo_texto?: string | null
+          created_at?: string
+          id?: string
+          nome_arquivo?: string
+          storage_path?: string
+          tamanho_bytes?: number
+          tipo_mime?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "documentos_chamada_id_fkey"
+            columns: ["chamada_id"]
+            isOneToOne: false
+            referencedRelation: "chamadas"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       propostas: {
         Row: {
           chamada_id: string
           condicoes_pagamento: string | null
+          conteudo_secoes: Json | null
           created_at: string
           enviada_em: string | null
           escopo: Json
@@ -59,6 +101,7 @@ export type Database = {
         Insert: {
           chamada_id: string
           condicoes_pagamento?: string | null
+          conteudo_secoes?: Json | null
           created_at?: string
           enviada_em?: string | null
           escopo?: Json
@@ -76,6 +119,7 @@ export type Database = {
         Update: {
           chamada_id?: string
           condicoes_pagamento?: string | null
+          conteudo_secoes?: Json | null
           created_at?: string
           enviada_em?: string | null
           escopo?: Json

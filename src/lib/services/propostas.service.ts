@@ -21,8 +21,6 @@ export const propostasService = {
     return p;
   },
 
-  // TODO(integração): gerar link_externo + KPIs comerciais a partir do relatório.
-  // Por enquanto recebe tudo pronto pelo body (chamada_id + link_externo + KPIs opcionais).
   async criar(supabase: Client, input: CriarPropostaInput) {
     const chamada = await chamadasRepo.obter(supabase, input.chamada_id);
     if (!chamada) throw new AppError("NOT_FOUND", "Chamada não encontrada");

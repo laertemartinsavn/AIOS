@@ -5,7 +5,7 @@
 
 ## Contexto
 
-Usuários precisam enriquecer a análise de calls e a geração de propostas com documentos de contexto (RFPs, contratos, escopos técnicos, planilhas de itens). Hoje a IA recebe apenas a transcrição da call. Com documentos anexados, tanto a extração de KPIs quanto a proposta comercial ficam mais assertivas.
+Usuários precisam enriquecer a análise de calls e a geração de propostas com documentos de contexto (RFPs, contratos, escopos técnicos, planilhas de itens). Hoje a IA recebe apenas a transcrição. Com documentos anexados, tanto a extração de KPIs quanto a proposta comercial ficam mais assertivas.
 
 ## Escopo do MVP
 
@@ -122,7 +122,7 @@ Os textos extraídos são inseridos na mensagem do usuário antes da transcriç�
 --- documento 2: Contrato.docx ---
 <conteúdo extraído>
 
-[TRANSCRIÇÃO DA CALL]
+[TRANSCRIÇÃO]
 <transcrição>
 ```
 

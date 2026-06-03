@@ -111,8 +111,33 @@ const ANALISE_TOOL = {
   },
 };
 
+export type DocContexto = { nome: string; conteudo: string };
+
+function montarMensagemUsuario(
+  transcricao: string,
+  docs: DocContexto[],
+  instrucoes?: string,
+): string {
+  const docsValidos = docs.filter((d) => d.conteudo.trim());
+  let msg: string;
+  if (docsValidos.length === 0) {
+    msg = `Analise a transcrição abaixo:\n\n<transcricao>\n${transcricao}\n</transcricao>`;
+  } else {
+    const blocosDocs = docsValidos
+      .map((d, i) => `--- documento ${i + 1}: ${d.nome} ---\n${d.conteudo}`)
+      .join("\n\n");
+    msg = `[DOCUMENTOS DE CONTEXTO]\n${blocosDocs}\n\n[TRANSCRIÇÃO]\n<transcricao>\n${transcricao}\n</transcricao>`;
+  }
+  if (instrucoes?.trim()) {
+    msg += `\n\n[ORIENTAÇÕES ADICIONAIS DO USUÁRIO — leve em consideração ao analisar]\n${instrucoes.trim()}`;
+  }
+  return msg;
+}
+
 export async function analisarCall(
   transcricao: string,
+  documentos: DocContexto[] = [],
+  instrucoes?: string,
 ): Promise<AnaliseCallOutput> {
   const client = getAnthropicClient();
 
@@ -132,7 +157,7 @@ export async function analisarCall(
     messages: [
       {
         role: "user",
-        content: `Analise a transcrição abaixo:\n\n<transcricao>\n${transcricao}\n</transcricao>`,
+        content: montarMensagemUsuario(transcricao, documentos, instrucoes),
       },
     ],
   });
