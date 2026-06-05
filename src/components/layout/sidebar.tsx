@@ -6,9 +6,11 @@ import { usePathname } from "next/navigation";
 type Props = {
   userInitials: string;
   userName: string;
+  appVersion?: string;
+  buildDate?: string;
 };
 
-export function Sidebar({ userInitials, userName }: Props) {
+export function Sidebar({ userInitials, userName, appVersion, buildDate }: Props) {
   const pathname = usePathname();
 
   const isDashboard = pathname === "/dashboard";
@@ -34,6 +36,29 @@ export function Sidebar({ userInitials, userName }: Props) {
             T E C N O L O G I A
           </div>
         </div>
+      </div>
+
+      {/* Version badge */}
+      <div className="rounded-lg bg-white/[0.06] px-3 py-2">
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-brand text-[10px] font-semibold uppercase tracking-[.14em] text-white/40">
+            Versão
+          </span>
+          <span className="font-brand text-[12px] font-bold text-white/80">
+            v{appVersion ?? "—"}
+          </span>
+        </div>
+        {buildDate && (
+          <div className="mt-0.5 text-[10px] text-white/35">
+            {new Date(buildDate).toLocaleString("pt-BR", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+          </div>
+        )}
       </div>
 
       {/* Operação */}

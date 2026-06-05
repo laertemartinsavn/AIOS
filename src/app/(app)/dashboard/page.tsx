@@ -4,7 +4,6 @@ import { chamadasService } from "@/lib/services/chamadas.service";
 import { relatoriosService } from "@/lib/services/relatorios.service";
 import { propostasService } from "@/lib/services/propostas.service";
 import { formatarBRL, formatarData } from "@/lib/ui/cores";
-import type { Relatorio, Proposta } from "@/lib/types/entities";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -69,7 +68,6 @@ export default async function DashboardPage() {
             Análises e propostas comerciais geradas a partir de gravações ou transcrições.
           </p>
         </div>
-        <VersionBadge />
       </div>
 
       {/* KPI cards */}
@@ -345,33 +343,6 @@ function RecentCard({
         ) : (
           children
         )}
-      </div>
-    </div>
-  );
-}
-
-function VersionBadge() {
-  const version = process.env.APP_VERSION ?? "—";
-  const buildDate = process.env.BUILD_DATE
-    ? new Date(process.env.BUILD_DATE).toLocaleString("pt-BR", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      })
-    : "—";
-
-  return (
-    <div className="flex-shrink-0 rounded-xl border border-[#D8DAF0] bg-white px-3.5 py-2.5 shadow-[0_2px_6px_rgba(31,34,85,0.06)]">
-      <div className="font-brand text-[10px] font-semibold uppercase tracking-[.12em] text-[#797C7F]">
-        Versão
-      </div>
-      <div className="mt-0.5 font-brand text-[13px] font-bold text-[#3D4392]">
-        v{version}
-      </div>
-      <div className="mt-0.5 text-[10.5px] text-[#A9ABAE]">
-        {buildDate}
       </div>
     </div>
   );

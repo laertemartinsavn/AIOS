@@ -31,7 +31,12 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <div className="flex h-screen overflow-hidden bg-[#1F2255]">
-      <Sidebar userInitials={initials} userName={displayName} />
+      <Sidebar
+        userInitials={initials}
+        userName={displayName}
+        appVersion={process.env.APP_VERSION ?? "0.1.0"}
+        buildDate={process.env.BUILD_DATE ?? ""}
+      />
       <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
         <Topbar userInitials={initials} />
         <main className="flex-1 overflow-auto bg-[#F4F5FB]">
