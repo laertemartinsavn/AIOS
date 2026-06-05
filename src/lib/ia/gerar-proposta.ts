@@ -76,9 +76,11 @@ Sua tarefa é criar uma proposta comercial COMPLETA usando os screenshots do mod
 ═══════════════════════════════════════════════════
 REGRA DO INVESTIMENTO — OBRIGATORIO PREENCHER perfis_selecionados
 ═══════════════════════════════════════════════════
-NAO calcule precos manualmente. NAO coloque valores monetarios no campo "investimento".
+ATENCAO CRITICA: Os screenshots são MODELOS VISUAIS apenas. Os valores monetários nos screenshots são EXEMPLOS de outra proposta e NÃO devem ser copiados ou usados em nenhuma circunstância. O sistema calculará todos os valores automaticamente.
+
+NAO calcule precos manualmente. NAO coloque valores monetarios no campo "investimento". NAO copie valores dos screenshots.
 Sua responsabilidade é OBRIGATORIA e UNICA: preencher o campo "perfis_selecionados" com a lista de perfis necessarios.
-O sistema calculará todos os valores automaticamente com as tarifas exatas do ratecard.
+O sistema calculará todos os valores automaticamente com as tarifas exatas do RATECARD OFICIAL fornecido após os screenshots.
 
 OBRIGATORIO: Sempre preencha "perfis_selecionados" com pelo menos 1 perfil (NUNCA deixe vazio).
 
@@ -265,7 +267,8 @@ const PROPOSTA_TOOL = {
       versao: { type: "integer", minimum: 1, description: "Sempre 1." },
       perfis_selecionados: {
         type: "array",
-        description: "OBRIGATÓRIO. Lista dos perfis necessários para o projeto. O sistema calculará os valores monetários a partir daqui — NÃO coloque preços no campo investimento, apenas estrutura.",
+        minItems: 1,
+        description: "OBRIGATÓRIO. Lista dos perfis necessários para o projeto (mínimo 1). O sistema calculará os valores monetários a partir daqui — NÃO coloque preços no campo investimento, NÃO copie valores dos screenshots.",
         items: {
           type: "object",
           properties: {

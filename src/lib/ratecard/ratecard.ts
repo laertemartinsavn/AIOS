@@ -25,7 +25,8 @@ export function lerLinhasRatecard(modalidade: "CLT" | "PJ" = "PJ"): LinhaRatecar
   let wb: XLSX.WorkBook;
   try {
     wb = XLSX.readFile(arquivo);
-  } catch {
+  } catch (err) {
+    console.error("[lerLinhasRatecard] falha ao ler arquivo:", arquivo, String(err));
     return [];
   }
 
@@ -180,25 +181,25 @@ export function formatarInvestimento(
 ): string {
   const { itens, valor_total } = resultado;
 
-  const tabelaLinhas = itens.map((i) => {
-    const alocacao = i.horas_mensais === 168 ? "Full-time" : `Part-time (${i.horas_mensais}h/mês)`;
-    return `| ${i.perfil_ratecard} | ${i.quantidade} | ${alocacao} | ${i.meses} | ${brl(i.tarifa_mensal_proporcional)} | ${brl(i.subtotal)} |`;
-  });
-
-  const tabela = [
-    "| Perfil | Qtde | Alocação | Meses | R$/mês | Total |",
-    "|---|---|---|---|---|---|",
-    ...tabelaLinhas,
-    `| **TOTAL** | | | | | **${brl(valor_total)}** |`,
-  ].join("\n");
-
   const valorTexto = modeloId === "body-shop"
     ? `O valor mensal da alocação é de: **${brl(valor_total)}** (${brlExtenso(valor_total)}).`
     : modeloId === "squad-gerenciada"
       ? `O valor mensal da squad é de: **${brl(valor_total)}** (${brlExtenso(valor_total)}).`
       : `O valor previsto para o projeto é de: **${brl(valor_total)}** (${brlExtenso(valor_total)}), já inclusos todos os tributos aplicáveis.`;
 
+  // Body Shop: tabela com R$/mês por perfil + total mensal
   if (modeloId === "body-shop") {
+    const tabelaLinhas = itens.map((i) => {
+      const alocacao = i.horas_mensais === 168 ? "Full-time" : `Part-time (${i.horas_mensais}h/mês)`;
+      return `| ${i.perfil_ratecard} | ${i.quantidade} | ${alocacao} | ${brl(i.tarifa_mensal_proporcional)} | ${brl(i.subtotal)} |`;
+    });
+    const tabela = [
+      "| Perfil | Qtde | Alocação | R$/mês | Total/mês |",
+      "|---|---|---|---|---|",
+      ...tabelaLinhas,
+      `| **TOTAL** | | | | **${brl(valor_total)}** |`,
+    ].join("\n");
+
     return [
       "VALOR MENSAL DA ALOCAÇÃO",
       "",
@@ -212,19 +213,69 @@ export function formatarInvestimento(
         "",
         "• O faturamento será realizado mensalmente, mediante emissão de nota fiscal até o dia 10 de cada mês de competência;",
         "• O pagamento deverá ser realizado em até 30 dias após a emissão da nota fiscal;",
-        "• Eventuais reajustes após o período inicial poderão ser negociados com antecedência de 30 dias.",
+        "• Eventuais reajustes após o período inicial poderão ser negociados com antecedência de 30 dias;",
+        "• Em caso de afastamento do profissional por motivo de força maior, a AVN se compromete a substituí-lo em prazo a ser acordado entre as partes, sem ônus adicional.",
         "",
         "VALIDADE DA PROPOSTA",
         "",
-        "Esta proposta possui validade de 30 dias a partir da data de sua emissão.",
+        "Esta proposta possui validade de 30 dias a partir da data de sua emissão, podendo ser revisada após este período em função de disponibilidade do profissional ou alteração de condições comerciais.",
       ]),
     ].join("\n");
   }
 
+  // Squad Gerenciada: tabela de equipe SEM preços individuais + valor total da squad
+  if (modeloId === "squad-gerenciada") {
+    const equipeTabelaLinhas = itens.map((i) => {
+      const alocacao = i.horas_mensais === 168 ? "Full-time" : `Part-time (${i.horas_mensais}h/mês)`;
+      return `| ${i.quantidade} | ${i.perfil_ratecard} | ${alocacao} | ${i.horas_mensais} |`;
+    });
+    const equipeSugerida = [
+      "EQUIPE SUGERIDA",
+      "",
+      "| Qtde | Perfil | Alocação | Horas/mês |",
+      "|---|---|---|---|",
+      ...equipeTabelaLinhas,
+    ].join("\n");
+
+    return [
+      equipeSugerida,
+      "",
+      "VALOR MENSAL DA SQUAD",
+      "",
+      valorTexto,
+      "O valor já inclui todos os tributos aplicáveis. Não estão inclusos eventuais custos de deslocamento, hospedagem e alimentação em caso de atuação presencial, que serão de responsabilidade do cliente conforme política interna.",
+      "",
+      ...(investimentoBase ? extrairSecoesFaturamento(investimentoBase) : [
+        "CONDIÇÕES DE FATURAMENTO",
+        "",
+        "• O faturamento será realizado mensalmente, mediante emissão de nota fiscal até o dia 10 de cada mês de competência;",
+        "• O pagamento deverá ser realizado em até 30 dias após a emissão da nota fiscal;",
+        "• Eventuais reajustes após o período inicial poderão ser negociados com antecedência de 30 dias;",
+        "• Em caso de afastamento de profissional da squad por motivo de força maior, a AVN se compromete a substituí-lo em prazo a ser acordado entre as partes, sem ônus adicional.",
+        "",
+        "VALIDADE DA PROPOSTA",
+        "",
+        "Esta proposta possui validade de 30 dias a partir da data de sua emissão, podendo ser revisada após este período em função de disponibilidade dos profissionais ou alteração de condições comerciais.",
+      ]),
+    ].join("\n");
+  }
+
+  // Projeto Fechado (SAP e Não SAP): tabela completa com meses e total do contrato
+  const tabelaLinhas = itens.map((i) => {
+    const alocacao = i.horas_mensais === 168 ? "Full-time" : `Part-time (${i.horas_mensais}h/mês)`;
+    return `| ${i.perfil_ratecard} | ${i.quantidade} | ${alocacao} | ${i.meses} | ${brl(i.tarifa_mensal_proporcional)} | ${brl(i.subtotal)} |`;
+  });
+  const tabela = [
+    "| Perfil | Qtde | Alocação | Meses | R$/mês | Total |",
+    "|---|---|---|---|---|---|",
+    ...tabelaLinhas,
+    `| **TOTAL** | | | | | **${brl(valor_total)}** |`,
+  ].join("\n");
+
   return [
-    modeloId === "squad-gerenciada"
-      ? "EQUIPE SUGERIDA / VALOR MENSAL DA SQUAD"
-      : "15. Investimento Previsto, Condições de Faturamento e Validade da Proposta",
+    "15. Investimento Previsto, Condições de Faturamento e Validade da Proposta",
+    "",
+    tabela,
     "",
     valorTexto,
     "",
