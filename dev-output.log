@@ -1,0 +1,195 @@
+
+> aios@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.15.11:3000
+- Environments: .env.local
+✓ Ready in 2.5s
+⚠ Slow filesystem detected. The benchmark took 201ms. If C:\Users\Laerte Martins\Desktop\Code\AIOS\.next/dev is a network drive, consider moving it to a local folder.
+See more: https://nextjs.org/docs/app/guides/local-development
+
+ GET /dashboard/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7/proposta 200 in 8.1s (next.js: 5.6s, proxy.ts: 1963ms, application-code: 537ms)
+ GET / 200 in 2.8s (next.js: 413ms, proxy.ts: 172ms, application-code: 2.2s)
+ GET /login 200 in 1057ms (next.js: 335ms, proxy.ts: 129ms, application-code: 593ms)
+ GET /dashboard 200 in 2.5s (next.js: 119ms, proxy.ts: 62ms, application-code: 2.3s)
+ GET /dashboard 200 in 2.2s (next.js: 91ms, proxy.ts: 297ms, application-code: 1832ms)
+ GET /dashboard/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7/proposta 200 in 665ms (next.js: 50ms, proxy.ts: 159ms, application-code: 456ms)
+ GET /dashboard/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7 200 in 1889ms (next.js: 1105ms, proxy.ts: 217ms, application-code: 567ms)
+ POST /api/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7/reanalisar 200 in 30.5s (next.js: 1424ms, proxy.ts: 180ms, application-code: 28.9s)
+ GET /dashboard/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7 200 in 567ms (next.js: 40ms, proxy.ts: 62ms, application-code: 465ms)
+[gerar-proposta] ratecard carregado: 151 perfis (PJ). Primeiros: Agilista Especialista, Agilista - Junior Júnior, Agilista Pleno
+[gerar-proposta] perfis_selecionados: [{"perfil":"Product Owner Sênior","quantidade":1,"horas_mensais":168,"meses":12},{"perfil":"Desenvolvedor FullStack Pleno","quantidade":2,"horas_mensais":168,"meses":12},{"perfil":"Desenvolvedor FullStack Sênior","quantidade":2,"horas_mensais":168,"meses":12},{"perfil":"Analista de Qualidade Pleno","quantidade":1,"horas_mensais":168,"meses":12},{"perfil":"Analista de Qualidade Sênior","quantidade":1,"horas_mensais":168,"meses":12}]
+[gerar-proposta] perfis_count: 5
+[gerar-proposta] ratecard_linhas_count: 151
+[gerar-proposta] cwd: C:\Users\Laerte Martins\Desktop\Code\AIOS
+[gerar-proposta] modalidade: PJ
+[gerar-proposta] modalidade_atuacao: MODALIDADE DE ATUAÇÃO
+
+REGIME DE TRABALHO
+——————————————————————————————————————
+A squad atuará em modalidade 100% remota (home office), com disponibilidade em horário comercial, de segunda a sexta-feira, 168 horas mensais por profissional.
+
+
+CARGA HORÁRIA
+——————————————————————————————————————
+A carga horária de cada profissional da squad seguirá o regime de dedicação full-time (168 horas mensais), conforme descrito nesta proposta. Eventuais demandas extraordinárias, como horas adicionais, sobreaviso ou atendimentos fora do horário comercial, poderão ser realizadas mediante alinhamento prévio entre as partes, sendo as horas excedentes faturadas com acréscimo de 40% sobre o valor hora contratado.
+
+
+DESPESAS COM ATUAÇÃO PRESENCIAL
+——————————————————————————————————————
+A atuação dos profissionais ocorrerá em modalidade 100% remota. Entretanto, caso haja necessidade de participação presencial em reuniões, workshops, alinhamentos, treinamentos ou demais atividades relacionadas ao projeto, os custos correspondentes serão de responsabilidade da DocWay, conforme sua política vigente e mediante alinhamento prévio entre as partes.
+
+Serão considerados, quando aplicáveis: Hospedagem; Alimentação; Deslocamentos e transporte; Passagens aéreas e/ou rodoviárias; Locação de veículos; Demais despesas logísticas necessárias para a execução das atividades presenciais.
+[recalcularInvestimento] debug: {
+  perfisCount: 5,
+  ratecardLinhasCount: 151,
+  modalidade: 'PJ',
+  regime: 'Hib',
+  mensal: true
+}
+[recalcularInvestimento] perfil debug: {
+  perfil_original: 'Product Owner Sênior',
+  perfil_encontrado: 'Product Owner Sênior',
+  quantidade: 1,
+  horas_mensais: 168,
+  meses: 12,
+  regime: 'Hib',
+  tarifaHora: 174.9,
+  tarifaMensal168: 29383.2,
+  proporcao: 1,
+  tarifaMensalProp: 29383.2,
+  subtotal: 29383.2
+}
+[recalcularInvestimento] perfil debug: {
+  perfil_original: 'Desenvolvedor FullStack Pleno',
+  perfil_encontrado: 'Desenvolvedor FullStack Pleno',
+  quantidade: 2,
+  horas_mensais: 168,
+  meses: 12,
+  regime: 'Hib',
+  tarifaHora: 149.457,
+  tarifaMensal168: 25108.775999999998,
+  proporcao: 1,
+  tarifaMensalProp: 25108.775999999998,
+  subtotal: 50217.551999999996
+}
+[recalcularInvestimento] perfil debug: {
+  perfil_original: 'Desenvolvedor FullStack Sênior',
+  perfil_encontrado: 'Desenvolvedor FullStack Sênior',
+  quantidade: 2,
+  horas_mensais: 168,
+  meses: 12,
+  regime: 'Hib',
+  tarifaHora: 182.85299999999998,
+  tarifaMensal168: 30719.303999999996,
+  proporcao: 1,
+  tarifaMensalProp: 30719.303999999996,
+  subtotal: 61438.60799999999
+}
+[recalcularInvestimento] perfil debug: {
+  perfil_original: 'Analista de Qualidade Pleno',
+  perfil_encontrado: 'Analista de Qualidade Pleno',
+  quantidade: 1,
+  horas_mensais: 168,
+  meses: 12,
+  regime: 'Hib',
+  tarifaHora: 87.45,
+  tarifaMensal168: 14691.6,
+  proporcao: 1,
+  tarifaMensalProp: 14691.6,
+  subtotal: 14691.6
+}
+[recalcularInvestimento] perfil debug: {
+  perfil_original: 'Analista de Qualidade Sênior',
+  perfil_encontrado: 'Analista de Qualidade Sênior',
+  quantidade: 1,
+  horas_mensais: 168,
+  meses: 12,
+  regime: 'Hib',
+  tarifaHora: 107.646,
+  tarifaMensal168: 18084.528,
+  proporcao: 1,
+  tarifaMensalProp: 18084.528,
+  subtotal: 18084.528
+}
+[recalcularInvestimento] resultado final: { itensCount: 5, valor_total: 173815.48799999998 }
+[gerar-proposta] cálculo investimento: {
+  regime: 'Hib',
+  usarValorMensal: true,
+  itens: [
+    {
+      perfil: 'Product Owner Sênior',
+      quantidade: 1,
+      horas_mensais: 168,
+      meses: 12,
+      tarifa_hora: 174.9,
+      tarifa_mensal_168: 29383.2,
+      tarifa_mensal_proporcional: 29383.2,
+      subtotal: 29383.2,
+      encontrado: true
+    },
+    {
+      perfil: 'Desenvolvedor FullStack Pleno',
+      quantidade: 2,
+      horas_mensais: 168,
+      meses: 12,
+      tarifa_hora: 149.457,
+      tarifa_mensal_168: 25108.775999999998,
+      tarifa_mensal_proporcional: 25108.775999999998,
+      subtotal: 50217.551999999996,
+      encontrado: true
+    },
+    {
+      perfil: 'Desenvolvedor FullStack Sênior',
+      quantidade: 2,
+      horas_mensais: 168,
+      meses: 12,
+      tarifa_hora: 182.85299999999998,
+      tarifa_mensal_168: 30719.303999999996,
+      tarifa_mensal_proporcional: 30719.303999999996,
+      subtotal: 61438.60799999999,
+      encontrado: true
+    },
+    {
+      perfil: 'Analista de Qualidade Pleno',
+      quantidade: 1,
+      horas_mensais: 168,
+      meses: 12,
+      tarifa_hora: 87.45,
+      tarifa_mensal_168: 14691.6,
+      tarifa_mensal_proporcional: 14691.6,
+      subtotal: 14691.6,
+      encontrado: true
+    },
+    {
+      perfil: 'Analista de Qualidade Sênior',
+      quantidade: 1,
+      horas_mensais: 168,
+      meses: 12,
+      tarifa_hora: 107.646,
+      tarifa_mensal_168: 18084.528,
+      tarifa_mensal_proporcional: 18084.528,
+      subtotal: 18084.528,
+      encontrado: true
+    }
+  ],
+  valor_total: 173815.48799999998
+}
+[gerar-proposta] ANTES DE SALVAR no banco: {
+  valor_total: 173815.48799999998,
+  titulo: 'Proposta Técnica e Comercial — Squad Multidisciplinar — DocWay',
+  status: 'rascunho',
+  investimento_preview: 'EQUIPE SUGERIDA\n' +
+    '\n' +
+    '| Qtde | Perfil | Alocação | Horas/mês |\n' +
+    '|---|---|---|---|\n' +
+    '| 1 | Product Owner Sêni'
+}
+[gerar-proposta] APOS SALVAR no banco: { id: 'd1bcf369-0539-4213-b4b7-890ea17d1967', valor_total: 173815.49 }
+ POST /api/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7/gerar-proposta 201 in 2.5min (next.js: 2.0s, proxy.ts: 399ms, application-code: 2.4min)
+ GET /dashboard/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7/proposta 200 in 1048ms (next.js: 30ms, proxy.ts: 136ms, application-code: 882ms)
+ GET /dashboard/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7/proposta 200 in 807ms (next.js: 12ms, proxy.ts: 137ms, application-code: 658ms)
+ POST /api/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7/proposta/chat 200 in 14.7s (next.js: 1198ms, proxy.ts: 384ms, application-code: 13.2s)
+ GET /dashboard/chamadas/e2fb564d-3ff3-4ec0-848d-979ace4c17b7/proposta 200 in 4.1s (next.js: 269ms, proxy.ts: 1509ms, application-code: 2.4s)

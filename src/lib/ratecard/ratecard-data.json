@@ -1,0 +1,2120 @@
+{
+  "PJ": [
+    {
+      "perfil": "Agilista Especialista",
+      "horaHO": 195.14,
+      "mensalHO": 32783.52,
+      "horaHib": 214.654,
+      "mensalHib": 36061.872
+    },
+    {
+      "perfil": "Agilista - Junior Júnior",
+      "horaHO": 70.83,
+      "mensalHO": 11899.44,
+      "horaHib": 77.913,
+      "mensalHib": 13089.384
+    },
+    {
+      "perfil": "Agilista Pleno",
+      "horaHO": 114.19,
+      "mensalHO": 19183.92,
+      "horaHib": 125.609,
+      "mensalHib": 21102.311999999998
+    },
+    {
+      "perfil": "Agilista Sênior",
+      "horaHO": 166.23,
+      "mensalHO": 27926.64,
+      "horaHib": 182.85299999999998,
+      "mensalHib": 30719.303999999996
+    },
+    {
+      "perfil": "Analista de Dados/ BI Especialista",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Analista de Dados/ BI Júnior",
+      "horaHO": 60.71,
+      "mensalHO": 10199.28,
+      "horaHib": 66.781,
+      "mensalHib": 11219.208
+    },
+    {
+      "perfil": "Analista de Dados/ BI Pleno",
+      "horaHO": 108.41,
+      "mensalHO": 18212.88,
+      "horaHib": 119.251,
+      "mensalHib": 20034.168
+    },
+    {
+      "perfil": "Analista de Dados/ BI Sênior",
+      "horaHO": 137.32,
+      "mensalHO": 23069.76,
+      "horaHib": 151.052,
+      "mensalHib": 25376.735999999997
+    },
+    {
+      "perfil": "Analista de Inteligência Artificial Especialista",
+      "horaHO": 195.14,
+      "mensalHO": 32783.52,
+      "horaHib": 214.654,
+      "mensalHib": 36061.872
+    },
+    {
+      "perfil": "Analista de Inteligência Artificial Júnior",
+      "horaHO": 70.83,
+      "mensalHO": 11899.44,
+      "horaHib": 77.913,
+      "mensalHib": 13089.384
+    },
+    {
+      "perfil": "Analista de Inteligência Artificial Pleno",
+      "horaHO": 108.41,
+      "mensalHO": 18212.88,
+      "horaHib": 119.251,
+      "mensalHib": 20034.168
+    },
+    {
+      "perfil": "Analista de Inteligência Artificial Sênior",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Analista de Processos Especialista",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Analista de Processos Júnior",
+      "horaHO": 60.71,
+      "mensalHO": 10199.28,
+      "horaHib": 66.781,
+      "mensalHib": 11219.208
+    },
+    {
+      "perfil": "Analista de Processos Pleno",
+      "horaHO": 101.18,
+      "mensalHO": 16998.24,
+      "horaHib": 111.298,
+      "mensalHib": 18698.064
+    },
+    {
+      "perfil": "Analista de Processos Sênior",
+      "horaHO": 144.55,
+      "mensalHO": 24284.4,
+      "horaHib": 159.00500000000002,
+      "mensalHib": 26712.840000000004
+    },
+    {
+      "perfil": "Analista de Qualidade Especialista",
+      "horaHO": 144.55,
+      "mensalHO": 24284.4,
+      "horaHib": 159.00500000000002,
+      "mensalHib": 26712.840000000004
+    },
+    {
+      "perfil": "Analista de Qualidade Júnior",
+      "horaHO": 50.59,
+      "mensalHO": 8499.12,
+      "horaHib": 55.649,
+      "mensalHib": 9349.032
+    },
+    {
+      "perfil": "Analista de Qualidade Pleno",
+      "horaHO": 79.5,
+      "mensalHO": 13356,
+      "horaHib": 87.45,
+      "mensalHib": 14691.6
+    },
+    {
+      "perfil": "Analista de Qualidade Sênior",
+      "horaHO": 97.86,
+      "mensalHO": 16440.48,
+      "horaHib": 107.646,
+      "mensalHib": 18084.528
+    },
+    {
+      "perfil": "Analista de Negócios Especialista",
+      "horaHO": 151.77,
+      "mensalHO": 25497.36,
+      "horaHib": 166.947,
+      "mensalHib": 28047.096
+    },
+    {
+      "perfil": "Analista de Negócios Júnior",
+      "horaHO": 69.38,
+      "mensalHO": 11655.84,
+      "horaHib": 76.318,
+      "mensalHib": 12821.423999999999
+    },
+    {
+      "perfil": "Analista de Negócios Pleno",
+      "horaHO": 108.41,
+      "mensalHO": 18212.88,
+      "horaHib": 119.251,
+      "mensalHib": 20034.168
+    },
+    {
+      "perfil": "Analista de Negócios Sênior",
+      "horaHO": 151.77,
+      "mensalHO": 25497.36,
+      "horaHib": 166.947,
+      "mensalHib": 28047.096
+    },
+    {
+      "perfil": "Analista de redes/infraestrutura Especialista",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Analista de redes/infraestrutura Júnior",
+      "horaHO": 57.82,
+      "mensalHO": 9713.76,
+      "horaHib": 63.602000000000004,
+      "mensalHib": 10685.136
+    },
+    {
+      "perfil": "Analista de redes/infraestrutura Pleno",
+      "horaHO": 86.73,
+      "mensalHO": 14570.640000000001,
+      "horaHib": 95.403,
+      "mensalHib": 16027.704000000002
+    },
+    {
+      "perfil": "Analista de redes/infraestrutura Sênior",
+      "horaHO": 115.64,
+      "mensalHO": 19427.52,
+      "horaHib": 127.20400000000001,
+      "mensalHib": 21370.272
+    },
+    {
+      "perfil": "Analista de Suporte (N1) Júnior",
+      "horaHO": 33.24,
+      "mensalHO": 5584.320000000001,
+      "horaHib": 36.564,
+      "mensalHib": 6142.752
+    },
+    {
+      "perfil": "Analista de Suporte (N1) Pleno",
+      "horaHO": 49.14,
+      "mensalHO": 8255.52,
+      "horaHib": 54.054,
+      "mensalHib": 9081.072
+    },
+    {
+      "perfil": "Analista de Suporte (N1) Sênior",
+      "horaHO": 75.88,
+      "mensalHO": 12747.84,
+      "horaHib": 83.46799999999999,
+      "mensalHib": 14022.623999999998
+    },
+    {
+      "perfil": "Analista de Suporte (N2) Júnior",
+      "horaHO": 43.36,
+      "mensalHO": 7284.48,
+      "horaHib": 47.696,
+      "mensalHib": 8012.928
+    },
+    {
+      "perfil": "Analista de Suporte (N2) Pleno",
+      "horaHO": 57.82,
+      "mensalHO": 9713.76,
+      "horaHib": 63.602000000000004,
+      "mensalHib": 10685.136
+    },
+    {
+      "perfil": "Analista de Suporte (N2) Sênior",
+      "horaHO": 79.5,
+      "mensalHO": 13356,
+      "horaHib": 87.45,
+      "mensalHib": 14691.6
+    },
+    {
+      "perfil": "Analista UX Especialista",
+      "horaHO": 137.32,
+      "mensalHO": 23069.76,
+      "horaHib": 151.052,
+      "mensalHib": 25376.735999999997
+    },
+    {
+      "perfil": "Analista UX Júnior",
+      "horaHO": 57.82,
+      "mensalHO": 9713.76,
+      "horaHib": 63.602000000000004,
+      "mensalHib": 10685.136
+    },
+    {
+      "perfil": "Analista UX Pleno",
+      "horaHO": 79.5,
+      "mensalHO": 13356,
+      "horaHib": 87.45,
+      "mensalHib": 14691.6
+    },
+    {
+      "perfil": "Analista UX Sênior",
+      "horaHO": 104.07,
+      "mensalHO": 17483.76,
+      "horaHib": 114.47699999999999,
+      "mensalHib": 19232.136
+    },
+    {
+      "perfil": "Arquiteto de infraestrutura Especialista",
+      "horaHO": 209.59,
+      "mensalHO": 35211.12,
+      "horaHib": 230.549,
+      "mensalHib": 38732.232
+    },
+    {
+      "perfil": "Arquiteto de infraestrutura Pleno",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "Arquiteto de infraestrutura Sênior",
+      "horaHO": 182.13,
+      "mensalHO": 30597.84,
+      "horaHib": 200.343,
+      "mensalHib": 33657.623999999996
+    },
+    {
+      "perfil": "Arquiteto de Soluções Especialista",
+      "horaHO": 209.59,
+      "mensalHO": 35211.12,
+      "horaHib": 230.549,
+      "mensalHib": 38732.232
+    },
+    {
+      "perfil": "Arquiteto de Soluções Pleno",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "Arquiteto de Soluções Sênior",
+      "horaHO": 182.13,
+      "mensalHO": 30597.84,
+      "horaHib": 200.343,
+      "mensalHib": 33657.623999999996
+    },
+    {
+      "perfil": "Cientista de Dados Especialista",
+      "horaHO": 205.26,
+      "mensalHO": 34483.68,
+      "horaHib": 225.786,
+      "mensalHib": 37932.048
+    },
+    {
+      "perfil": "Cientista de Dados Júnior",
+      "horaHO": 75.16,
+      "mensalHO": 12626.88,
+      "horaHib": 82.676,
+      "mensalHib": 13889.568000000001
+    },
+    {
+      "perfil": "Cientista de Dados Pleno",
+      "horaHO": 118.53,
+      "mensalHO": 19913.04,
+      "horaHib": 130.383,
+      "mensalHib": 21904.344
+    },
+    {
+      "perfil": "Cientista de Dados Sênior",
+      "horaHO": 180.68,
+      "mensalHO": 30354.24,
+      "horaHib": 198.74800000000002,
+      "mensalHib": 33389.664000000004
+    },
+    {
+      "perfil": "DBA - Administrador de Banco de Dados Especialista",
+      "horaHO": 202.37,
+      "mensalHO": 33998.16,
+      "horaHib": 222.607,
+      "mensalHib": 37397.976
+    },
+    {
+      "perfil": "DBA - Administrador de Banco de Dados Júnior",
+      "horaHO": 57.82,
+      "mensalHO": 9713.76,
+      "horaHib": 63.602000000000004,
+      "mensalHib": 10685.136
+    },
+    {
+      "perfil": "DBA - Administrador de Banco de Dados Pleno",
+      "horaHO": 93.95,
+      "mensalHO": 15783.6,
+      "horaHib": 103.345,
+      "mensalHib": 17361.96
+    },
+    {
+      "perfil": "DBA - Administrador de Banco de Dados Sênior",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "Desenvolvedor BackEnd Especialista",
+      "horaHO": 187.91,
+      "mensalHO": 31568.88,
+      "horaHib": 206.701,
+      "mensalHib": 34725.768
+    },
+    {
+      "perfil": "Desenvolvedor BackEnd Júnior",
+      "horaHO": 70.83,
+      "mensalHO": 11899.44,
+      "horaHib": 77.913,
+      "mensalHib": 13089.384
+    },
+    {
+      "perfil": "Desenvolvedor BackEnd Pleno",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "Desenvolvedor BackEnd Sênior",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Desenvolvedor FrontEnd Especialista",
+      "horaHO": 187.91,
+      "mensalHO": 31568.88,
+      "horaHib": 206.701,
+      "mensalHib": 34725.768
+    },
+    {
+      "perfil": "Desenvolvedor FrontEnd Júnior",
+      "horaHO": 70.83,
+      "mensalHO": 11899.44,
+      "horaHib": 77.913,
+      "mensalHib": 13089.384
+    },
+    {
+      "perfil": "Desenvolvedor FrontEnd Pleno",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "Desenvolvedor FrontEnd Sênior",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Desenvolvedor FullStack Especialista",
+      "horaHO": 196.58,
+      "mensalHO": 33025.44,
+      "horaHib": 216.238,
+      "mensalHib": 36327.984
+    },
+    {
+      "perfil": "Desenvolvedor FullStack Júnior",
+      "horaHO": 70.83,
+      "mensalHO": 11899.44,
+      "horaHib": 77.913,
+      "mensalHib": 13089.384
+    },
+    {
+      "perfil": "Desenvolvedor FullStack Pleno",
+      "horaHO": 135.87,
+      "mensalHO": 22826.16,
+      "horaHib": 149.457,
+      "mensalHib": 25108.775999999998
+    },
+    {
+      "perfil": "Desenvolvedor FullStack Sênior",
+      "horaHO": 166.23,
+      "mensalHO": 27926.64,
+      "horaHib": 182.85299999999998,
+      "mensalHib": 30719.303999999996
+    },
+    {
+      "perfil": "Desenvolvedor Mobile Especialista",
+      "horaHO": 196.58,
+      "mensalHO": 33025.44,
+      "horaHib": 216.238,
+      "mensalHib": 36327.984
+    },
+    {
+      "perfil": "Desenvolvedor Mobile Júnior",
+      "horaHO": 70.83,
+      "mensalHO": 11899.44,
+      "horaHib": 77.913,
+      "mensalHib": 13089.384
+    },
+    {
+      "perfil": "Desenvolvedor Mobile Pleno",
+      "horaHO": 135.87,
+      "mensalHO": 22826.16,
+      "horaHib": 149.457,
+      "mensalHib": 25108.775999999998
+    },
+    {
+      "perfil": "Desenvolvedor Mobile Sênior",
+      "horaHO": 166.23,
+      "mensalHO": 27926.64,
+      "horaHib": 182.85299999999998,
+      "mensalHib": 30719.303999999996
+    },
+    {
+      "perfil": "Desenvolvedor Salesforce Especialista",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Desenvolvedor Salesforce Júnior",
+      "horaHO": 65.04,
+      "mensalHO": 10926.720000000001,
+      "horaHib": 71.54400000000001,
+      "mensalHib": 12019.392000000002
+    },
+    {
+      "perfil": "Desenvolvedor Salesforce Pleno",
+      "horaHO": 101.18,
+      "mensalHO": 16998.24,
+      "horaHib": 111.298,
+      "mensalHib": 18698.064
+    },
+    {
+      "perfil": "Desenvolvedor Salesforce Sênior",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "DevSecOps Especialista",
+      "horaHO": 173.46,
+      "mensalHO": 29141.280000000002,
+      "horaHib": 190.806,
+      "mensalHib": 32055.408000000003
+    },
+    {
+      "perfil": "DevSecOps Júnior",
+      "horaHO": 70.83,
+      "mensalHO": 11899.44,
+      "horaHib": 77.913,
+      "mensalHib": 13089.384
+    },
+    {
+      "perfil": "DevSecOps Pleno",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "DevSecOps Sênior",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Engenheiro de Cloud (AWS / Azure / GCP) Especialista",
+      "horaHO": 202.37,
+      "mensalHO": 33998.16,
+      "horaHib": 222.607,
+      "mensalHib": 37397.976
+    },
+    {
+      "perfil": "Engenheiro de Cloud (AWS / Azure / GCP) Júnior",
+      "horaHO": 72.27,
+      "mensalHO": 12141.359999999999,
+      "horaHib": 79.497,
+      "mensalHib": 13355.496
+    },
+    {
+      "perfil": "Engenheiro de Cloud (AWS / Azure / GCP) Pleno",
+      "horaHO": 115.64,
+      "mensalHO": 19427.52,
+      "horaHib": 127.20400000000001,
+      "mensalHib": 21370.272
+    },
+    {
+      "perfil": "Engenheiro de Cloud (AWS / Azure / GCP) Sênior",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Engenheiro de Dados Especialista",
+      "horaHO": 166.23,
+      "mensalHO": 27926.64,
+      "horaHib": 182.85299999999998,
+      "mensalHib": 30719.303999999996
+    },
+    {
+      "perfil": "Engenheiro de Dados Júnior",
+      "horaHO": 65.04,
+      "mensalHO": 10926.720000000001,
+      "horaHib": 71.54400000000001,
+      "mensalHib": 12019.392000000002
+    },
+    {
+      "perfil": "Engenheiro de Dados Pleno",
+      "horaHO": 108.41,
+      "mensalHO": 18212.88,
+      "horaHib": 119.251,
+      "mensalHib": 20034.168
+    },
+    {
+      "perfil": "Engenheiro de Dados Sênior",
+      "horaHO": 144.55,
+      "mensalHO": 24284.4,
+      "horaHib": 159.00500000000002,
+      "mensalHib": 26712.840000000004
+    },
+    {
+      "perfil": "Gerente de Projetos Júnior",
+      "horaHO": 86.73,
+      "mensalHO": 14570.640000000001,
+      "horaHib": 95.403,
+      "mensalHib": 16027.704000000002
+    },
+    {
+      "perfil": "Gerente de Projetos Pleno",
+      "horaHO": 108.41,
+      "mensalHO": 18212.88,
+      "horaHib": 119.251,
+      "mensalHib": 20034.168
+    },
+    {
+      "perfil": "Gerente de Projetos Sênior",
+      "horaHO": 151.77,
+      "mensalHO": 25497.36,
+      "horaHib": 166.947,
+      "mensalHib": 28047.096
+    },
+    {
+      "perfil": "Machine Learning Engineer Especialista",
+      "horaHO": 216.82,
+      "mensalHO": 36425.76,
+      "horaHib": 238.502,
+      "mensalHib": 40068.336
+    },
+    {
+      "perfil": "Machine Learning Engineer Júnior",
+      "horaHO": 89.62,
+      "mensalHO": 15056.16,
+      "horaHib": 98.58200000000001,
+      "mensalHib": 16561.776
+    },
+    {
+      "perfil": "Machine Learning Engineer Pleno",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "Machine Learning Engineer Sênior",
+      "horaHO": 187.91,
+      "mensalHO": 31568.88,
+      "horaHib": 206.701,
+      "mensalHib": 34725.768
+    },
+    {
+      "perfil": "Product Owner Júnior",
+      "horaHO": 65.04,
+      "mensalHO": 10926.720000000001,
+      "horaHib": 71.54400000000001,
+      "mensalHib": 12019.392000000002
+    },
+    {
+      "perfil": "Product Owner Pleno",
+      "horaHO": 137.32,
+      "mensalHO": 23069.76,
+      "horaHib": 151.052,
+      "mensalHib": 25376.735999999997
+    },
+    {
+      "perfil": "Product Owner Sênior",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "RPA Especialista",
+      "horaHO": 166.23,
+      "mensalHO": 27926.64,
+      "horaHib": 182.85299999999998,
+      "mensalHib": 30719.303999999996
+    },
+    {
+      "perfil": "RPA Júnior",
+      "horaHO": 54.92,
+      "mensalHO": 9226.56,
+      "horaHib": 60.412000000000006,
+      "mensalHib": 10149.216
+    },
+    {
+      "perfil": "RPA Pleno",
+      "horaHO": 108.41,
+      "mensalHO": 18212.88,
+      "horaHib": 119.251,
+      "mensalHib": 20034.168
+    },
+    {
+      "perfil": "RPA Sênior",
+      "horaHO": 144.55,
+      "mensalHO": 24284.4,
+      "horaHib": 159.00500000000002,
+      "mensalHib": 26712.840000000004
+    },
+    {
+      "perfil": "Analista SAP Funcional Júnior",
+      "horaHO": 75.16,
+      "mensalHO": 12626.88,
+      "horaHib": 82.676,
+      "mensalHib": 13889.568000000001
+    },
+    {
+      "perfil": "Analista SAP Funcional Pleno",
+      "horaHO": 131.54,
+      "mensalHO": 22098.719999999998,
+      "horaHib": 144.694,
+      "mensalHib": 24308.591999999997
+    },
+    {
+      "perfil": "Analista SAP Funcional Sênior",
+      "horaHO": 173.46,
+      "mensalHO": 29141.280000000002,
+      "horaHib": 190.806,
+      "mensalHib": 32055.408000000003
+    },
+    {
+      "perfil": "Scrum Master Júnior",
+      "horaHO": 65.04,
+      "mensalHO": 10926.720000000001,
+      "horaHib": 71.54400000000001,
+      "mensalHib": 12019.392000000002
+    },
+    {
+      "perfil": "Scrum Master Pleno",
+      "horaHO": 115.64,
+      "mensalHO": 19427.52,
+      "horaHib": 127.20400000000001,
+      "mensalHib": 21370.272
+    },
+    {
+      "perfil": "Scrum Master Sênior",
+      "horaHO": 151.77,
+      "mensalHO": 25497.36,
+      "horaHib": 166.947,
+      "mensalHib": 28047.096
+    },
+    {
+      "perfil": "SRE - Site Reliability Engenier Especialista",
+      "horaHO": 231.28,
+      "mensalHO": 38855.04,
+      "horaHib": 254.40800000000002,
+      "mensalHib": 42740.544
+    },
+    {
+      "perfil": "SRE - Site Reliability Engenier Júnior",
+      "horaHO": 86.73,
+      "mensalHO": 14570.640000000001,
+      "horaHib": 95.403,
+      "mensalHib": 16027.704000000002
+    },
+    {
+      "perfil": "SRE - Site Reliability Engenier Pleno",
+      "horaHO": 122.86,
+      "mensalHO": 20640.48,
+      "horaHib": 135.14600000000002,
+      "mensalHib": 22704.528000000002
+    },
+    {
+      "perfil": "SRE - Site Reliability Engenier Sênior",
+      "horaHO": 173.46,
+      "mensalHO": 29141.280000000002,
+      "horaHib": 190.806,
+      "mensalHib": 32055.408000000003
+    },
+    {
+      "perfil": "Tech Lead Especialista",
+      "horaHO": 209.59,
+      "mensalHO": 35211.12,
+      "horaHib": 230.549,
+      "mensalHib": 38732.232
+    },
+    {
+      "perfil": "Tech Lead Pleno",
+      "horaHO": 151.77,
+      "mensalHO": 25497.36,
+      "horaHib": 166.947,
+      "mensalHib": 28047.096
+    },
+    {
+      "perfil": "Tech Lead Sênior",
+      "horaHO": 187.91,
+      "mensalHO": 31568.88,
+      "horaHib": 206.701,
+      "mensalHib": 34725.768
+    },
+    {
+      "perfil": "Analista de SI – Gestão de Acessos/ Identidade Júnior",
+      "horaHO": 50.59,
+      "mensalHO": 8499.12,
+      "horaHib": 55.649,
+      "mensalHib": 9349.032
+    },
+    {
+      "perfil": "Analista de SI – Gestão de Acessos/ Identidade Pleno",
+      "horaHO": 69.38,
+      "mensalHO": 11655.84,
+      "horaHib": 76.318,
+      "mensalHib": 12821.423999999999
+    },
+    {
+      "perfil": "Analista de SI – Gestão de Acessos/ Identidade Sênior",
+      "horaHO": 115.64,
+      "mensalHO": 19427.52,
+      "horaHib": 127.20400000000001,
+      "mensalHib": 21370.272
+    },
+    {
+      "perfil": "Analista de Segurança da Informação Especialista",
+      "horaHO": 209.59,
+      "mensalHO": 35211.12,
+      "horaHib": 230.549,
+      "mensalHib": 38732.232
+    },
+    {
+      "perfil": "Analista de Segurança da Informação Júnior",
+      "horaHO": 79.5,
+      "mensalHO": 13356,
+      "horaHib": 87.45,
+      "mensalHib": 14691.6
+    },
+    {
+      "perfil": "Analista de Segurança da Informação Pleno",
+      "horaHO": 122.86,
+      "mensalHO": 20640.48,
+      "horaHib": 135.14600000000002,
+      "mensalHib": 22704.528000000002
+    },
+    {
+      "perfil": "Analista de Segurança da Informação Sênior",
+      "horaHO": 187.91,
+      "mensalHO": 31568.88,
+      "horaHib": 206.701,
+      "mensalHib": 34725.768
+    },
+    {
+      "perfil": "Coordenador de T.I. Sênior",
+      "horaHO": 216.82,
+      "mensalHO": 36425.76,
+      "horaHib": 238.502,
+      "mensalHib": 40068.336
+    },
+    {
+      "perfil": "Consultor SAP SuccessFactors / Ariba Especialista",
+      "horaHO": 361.37,
+      "mensalHO": 60710.16,
+      "horaHib": 397.507,
+      "mensalHib": 66781.176
+    },
+    {
+      "perfil": "Consultor SAP SuccessFactors / Ariba Júnior",
+      "horaHO": 115.64,
+      "mensalHO": 19427.52,
+      "horaHib": 127.20400000000001,
+      "mensalHib": 21370.272
+    },
+    {
+      "perfil": "Consultor SAP SuccessFactors / Ariba Pleno",
+      "horaHO": 202.37,
+      "mensalHO": 33998.16,
+      "horaHib": 222.607,
+      "mensalHib": 37397.976
+    },
+    {
+      "perfil": "Consultor SAP SuccessFactors / Ariba Sênior",
+      "horaHO": 296.32,
+      "mensalHO": 49781.76,
+      "horaHib": 325.952,
+      "mensalHib": 54759.936
+    },
+    {
+      "perfil": "Consultor SAP MM/SD Especialista",
+      "horaHO": 361.37,
+      "mensalHO": 60710.16,
+      "horaHib": 397.507,
+      "mensalHib": 66781.176
+    },
+    {
+      "perfil": "Consultor SAP MM/SD Júnior",
+      "horaHO": 118.53,
+      "mensalHO": 19913.04,
+      "horaHib": 130.383,
+      "mensalHib": 21904.344
+    },
+    {
+      "perfil": "Consultor SAP MM/SD Pleno",
+      "horaHO": 202.37,
+      "mensalHO": 33998.16,
+      "horaHib": 222.607,
+      "mensalHib": 37397.976
+    },
+    {
+      "perfil": "Consultor SAP MM/SD Sênior",
+      "horaHO": 296.32,
+      "mensalHO": 49781.76,
+      "horaHib": 325.952,
+      "mensalHib": 54759.936
+    },
+    {
+      "perfil": "Consultor SAP FI/CO Especialista",
+      "horaHO": 419.19,
+      "mensalHO": 70423.92,
+      "horaHib": 461.109,
+      "mensalHib": 77466.31199999999
+    },
+    {
+      "perfil": "Consultor SAP FI/CO Júnior",
+      "horaHO": 127.2,
+      "mensalHO": 21369.600000000002,
+      "horaHib": 139.92000000000002,
+      "mensalHib": 23506.56
+    },
+    {
+      "perfil": "Consultor SAP FI/CO Pleno",
+      "horaHO": 224.05,
+      "mensalHO": 37640.4,
+      "horaHib": 246.455,
+      "mensalHib": 41404.44
+    },
+    {
+      "perfil": "Consultor SAP FI/CO Sênior",
+      "horaHO": 303.55,
+      "mensalHO": 50996.4,
+      "horaHib": 333.90500000000003,
+      "mensalHib": 56096.04000000001
+    },
+    {
+      "perfil": "Consultor SAP ABAP Especialista",
+      "horaHO": 404.74,
+      "mensalHO": 67996.32,
+      "horaHib": 445.214,
+      "mensalHib": 74795.952
+    },
+    {
+      "perfil": "Consultor SAP ABAP Júnior",
+      "horaHO": 122.86,
+      "mensalHO": 20640.48,
+      "horaHib": 135.14600000000002,
+      "mensalHib": 22704.528000000002
+    },
+    {
+      "perfil": "Consultor SAP ABAP Pleno",
+      "horaHO": 216.82,
+      "mensalHO": 36425.76,
+      "horaHib": 238.502,
+      "mensalHib": 40068.336
+    },
+    {
+      "perfil": "Consultor SAP ABAP Sênior",
+      "horaHO": 303.55,
+      "mensalHO": 50996.4,
+      "horaHib": 333.90500000000003,
+      "mensalHib": 56096.04000000001
+    },
+    {
+      "perfil": "Consultor SAP EWM Especialista",
+      "horaHO": 404.74,
+      "mensalHO": 67996.32,
+      "horaHib": 445.214,
+      "mensalHib": 74795.952
+    },
+    {
+      "perfil": "Consultor SAP EWM Júnior",
+      "horaHO": 130.09,
+      "mensalHO": 21855.12,
+      "horaHib": 143.099,
+      "mensalHib": 24040.631999999998
+    },
+    {
+      "perfil": "Consultor SAP EWM Pleno",
+      "horaHO": 239.95,
+      "mensalHO": 40311.6,
+      "horaHib": 263.945,
+      "mensalHib": 44342.76
+    },
+    {
+      "perfil": "Consultor SAP EWM Sênior",
+      "horaHO": 315.12,
+      "mensalHO": 52940.16,
+      "horaHib": 346.632,
+      "mensalHib": 58234.176
+    },
+    {
+      "perfil": "Consultor Oracle Netsuite Especialista",
+      "horaHO": 346.92,
+      "mensalHO": 58282.560000000005,
+      "horaHib": 381.612,
+      "mensalHib": 64110.816000000006
+    },
+    {
+      "perfil": "Consultor Oracle Netsuite Júnior",
+      "horaHO": 80.94,
+      "mensalHO": 13597.92,
+      "horaHib": 89.03399999999999,
+      "mensalHib": 14957.712
+    },
+    {
+      "perfil": "Consultor Oracle Netsuite Pleno",
+      "horaHO": 159,
+      "mensalHO": 26712,
+      "horaHib": 174.9,
+      "mensalHib": 29383.2
+    },
+    {
+      "perfil": "Consultor Oracle Netsuite Sênior",
+      "horaHO": 289.1,
+      "mensalHO": 48568.8,
+      "horaHib": 318.01000000000005,
+      "mensalHib": 53425.68000000001
+    },
+    {
+      "perfil": "Analista de Qualidade Automatizador Especialista",
+      "horaHO": 173.46,
+      "mensalHO": 29141.280000000002,
+      "horaHib": 190.806,
+      "mensalHib": 32055.408000000003
+    },
+    {
+      "perfil": "Analista de Qualidade Automatizador Júnior",
+      "horaHO": 60.71,
+      "mensalHO": 10199.28,
+      "horaHib": 66.781,
+      "mensalHib": 11219.208
+    },
+    {
+      "perfil": "Analista de Qualidade Automatizador Pleno",
+      "horaHO": 108.41,
+      "mensalHO": 18212.88,
+      "horaHib": 119.251,
+      "mensalHib": 20034.168
+    },
+    {
+      "perfil": "Analista de Qualidade Automatizador Sênior",
+      "horaHO": 144.55,
+      "mensalHO": 24284.4,
+      "horaHib": 159.00500000000002,
+      "mensalHib": 26712.840000000004
+    },
+    {
+      "perfil": "Especialista LTMC (Líder Técnico) Especialista",
+      "horaHO": 346.92,
+      "mensalHO": 58282.560000000005,
+      "horaHib": 381.612,
+      "mensalHib": 64110.816000000006
+    },
+    {
+      "perfil": "Especialista LTMC Especialista",
+      "horaHO": 318.01,
+      "mensalHO": 53425.68,
+      "horaHib": 349.811,
+      "mensalHib": 58768.248
+    },
+    {
+      "perfil": "Especialista ETL / Oracle EBS Especialista",
+      "horaHO": 289.1,
+      "mensalHO": 48568.8,
+      "horaHib": 318.01000000000005,
+      "mensalHib": 53425.68000000001
+    },
+    {
+      "perfil": "Especialista DQ / DQA Especialista",
+      "horaHO": 346.92,
+      "mensalHO": 58282.560000000005,
+      "horaHib": 381.612,
+      "mensalHib": 64110.816000000006
+    }
+  ],
+  "CLT": [
+    {
+      "perfil": "Agilista Especialista",
+      "horaHO": 251.97,
+      "mensalHO": 42330.96,
+      "horaHib": 277.16700000000003,
+      "mensalHib": 46564.056000000004
+    },
+    {
+      "perfil": "Agilista - Junior Júnior",
+      "horaHO": 99.38,
+      "mensalHO": 16695.84,
+      "horaHib": 109.318,
+      "mensalHib": 18365.424
+    },
+    {
+      "perfil": "Agilista Pleno",
+      "horaHO": 152.61,
+      "mensalHO": 25638.480000000003,
+      "horaHib": 167.871,
+      "mensalHib": 28202.328
+    },
+    {
+      "perfil": "Agilista Sênior",
+      "horaHO": 216.49,
+      "mensalHO": 36370.32,
+      "horaHib": 238.139,
+      "mensalHib": 40007.352
+    },
+    {
+      "perfil": "Analista de Dados/ BI Especialista",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Analista de Dados/ BI Júnior",
+      "horaHO": 86.96,
+      "mensalHO": 14609.279999999999,
+      "horaHib": 95.65599999999999,
+      "mensalHib": 16070.207999999999
+    },
+    {
+      "perfil": "Analista de Dados/ BI Pleno",
+      "horaHO": 145.51,
+      "mensalHO": 24445.68,
+      "horaHib": 160.06099999999998,
+      "mensalHib": 26890.247999999996
+    },
+    {
+      "perfil": "Analista de Dados/ BI Sênior",
+      "horaHO": 181,
+      "mensalHO": 30408,
+      "horaHib": 199.1,
+      "mensalHib": 33448.799999999996
+    },
+    {
+      "perfil": "Analista de Inteligência Artificial Especialista",
+      "horaHO": 251.97,
+      "mensalHO": 42330.96,
+      "horaHib": 277.16700000000003,
+      "mensalHib": 46564.056000000004
+    },
+    {
+      "perfil": "Analista de Inteligência Artificial Júnior",
+      "horaHO": 99.38,
+      "mensalHO": 16695.84,
+      "horaHib": 109.318,
+      "mensalHib": 18365.424
+    },
+    {
+      "perfil": "Analista de Inteligência Artificial Pleno",
+      "horaHO": 145.51,
+      "mensalHO": 24445.68,
+      "horaHib": 160.06099999999998,
+      "mensalHib": 26890.247999999996
+    },
+    {
+      "perfil": "Analista de Inteligência Artificial Sênior",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Analista de Processos Especialista",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Analista de Processos Júnior",
+      "horaHO": 86.96,
+      "mensalHO": 14609.279999999999,
+      "horaHib": 95.65599999999999,
+      "mensalHib": 16070.207999999999
+    },
+    {
+      "perfil": "Analista de Processos Pleno",
+      "horaHO": 136.64,
+      "mensalHO": 22955.519999999997,
+      "horaHib": 150.30399999999997,
+      "mensalHib": 25251.071999999996
+    },
+    {
+      "perfil": "Analista de Processos Sênior",
+      "horaHO": 189.87,
+      "mensalHO": 31898.16,
+      "horaHib": 208.857,
+      "mensalHib": 35087.976
+    },
+    {
+      "perfil": "Analista de Qualidade Especialista",
+      "horaHO": 189.87,
+      "mensalHO": 31898.16,
+      "horaHib": 208.857,
+      "mensalHib": 35087.976
+    },
+    {
+      "perfil": "Analista de Qualidade Júnior",
+      "horaHO": 74.54,
+      "mensalHO": 12522.720000000001,
+      "horaHib": 81.994,
+      "mensalHib": 13774.992
+    },
+    {
+      "perfil": "Analista de Qualidade Pleno",
+      "horaHO": 110.03,
+      "mensalHO": 18485.04,
+      "horaHib": 121.033,
+      "mensalHib": 20333.544
+    },
+    {
+      "perfil": "Analista de Qualidade Sênior",
+      "horaHO": 132.56,
+      "mensalHO": 22270.08,
+      "horaHib": 145.816,
+      "mensalHib": 24497.088
+    },
+    {
+      "perfil": "Analista de Negócios Especialista",
+      "horaHO": 198.74,
+      "mensalHO": 33388.32,
+      "horaHib": 218.614,
+      "mensalHib": 36727.152
+    },
+    {
+      "perfil": "Analista de Negócios Júnior",
+      "horaHO": 97.61,
+      "mensalHO": 16398.48,
+      "horaHib": 107.371,
+      "mensalHib": 18038.327999999998
+    },
+    {
+      "perfil": "Analista de Negócios Pleno",
+      "horaHO": 145.51,
+      "mensalHO": 24445.68,
+      "horaHib": 160.06099999999998,
+      "mensalHib": 26890.247999999996
+    },
+    {
+      "perfil": "Analista de Negócios Sênior",
+      "horaHO": 198.74,
+      "mensalHO": 33388.32,
+      "horaHib": 218.614,
+      "mensalHib": 36727.152
+    },
+    {
+      "perfil": "Analista de redes/infraestrutura Especialista",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Analista de redes/infraestrutura Júnior",
+      "horaHO": 83.42,
+      "mensalHO": 14014.56,
+      "horaHib": 91.762,
+      "mensalHib": 15416.016
+    },
+    {
+      "perfil": "Analista de redes/infraestrutura Pleno",
+      "horaHO": 118.9,
+      "mensalHO": 19975.2,
+      "horaHib": 130.79000000000002,
+      "mensalHib": 21972.720000000005
+    },
+    {
+      "perfil": "Analista de redes/infraestrutura Sênior",
+      "horaHO": 154.39,
+      "mensalHO": 25937.519999999997,
+      "horaHib": 169.82899999999998,
+      "mensalHib": 28531.271999999997
+    },
+    {
+      "perfil": "Analista de Suporte (N1) Júnior",
+      "horaHO": 53.25,
+      "mensalHO": 8946,
+      "horaHib": 58.575,
+      "mensalHib": 9840.6
+    },
+    {
+      "perfil": "Analista de Suporte (N1) Pleno",
+      "horaHO": 72.77,
+      "mensalHO": 12225.359999999999,
+      "horaHib": 80.047,
+      "mensalHib": 13447.895999999999
+    },
+    {
+      "perfil": "Analista de Suporte (N1) Sênior",
+      "horaHO": 105.59,
+      "mensalHO": 17739.12,
+      "horaHib": 116.149,
+      "mensalHib": 19513.032
+    },
+    {
+      "perfil": "Analista de Suporte (N2) Júnior",
+      "horaHO": 65.67,
+      "mensalHO": 11032.56,
+      "horaHib": 72.237,
+      "mensalHib": 12135.815999999999
+    },
+    {
+      "perfil": "Analista de Suporte (N2) Pleno",
+      "horaHO": 83.42,
+      "mensalHO": 14014.56,
+      "horaHib": 91.762,
+      "mensalHib": 15416.016
+    },
+    {
+      "perfil": "Analista de Suporte (N2) Sênior",
+      "horaHO": 110.03,
+      "mensalHO": 18485.04,
+      "horaHib": 121.033,
+      "mensalHib": 20333.544
+    },
+    {
+      "perfil": "Analista UX Especialista",
+      "horaHO": 181,
+      "mensalHO": 30408,
+      "horaHib": 199.1,
+      "mensalHib": 33448.799999999996
+    },
+    {
+      "perfil": "Analista UX Júnior",
+      "horaHO": 83.42,
+      "mensalHO": 14014.56,
+      "horaHib": 91.762,
+      "mensalHib": 15416.016
+    },
+    {
+      "perfil": "Analista UX Pleno",
+      "horaHO": 110.03,
+      "mensalHO": 18485.04,
+      "horaHib": 121.033,
+      "mensalHib": 20333.544
+    },
+    {
+      "perfil": "Analista UX Sênior",
+      "horaHO": 140.19,
+      "mensalHO": 23551.92,
+      "horaHib": 154.209,
+      "mensalHib": 25907.112
+    },
+    {
+      "perfil": "Arquiteto de infraestrutura Especialista",
+      "horaHO": 269.71,
+      "mensalHO": 45311.28,
+      "horaHib": 296.681,
+      "mensalHib": 49842.407999999996
+    },
+    {
+      "perfil": "Arquiteto de infraestrutura Pleno",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "Arquiteto de infraestrutura Sênior",
+      "horaHO": 236,
+      "mensalHO": 39648,
+      "horaHib": 259.6,
+      "mensalHib": 43612.8
+    },
+    {
+      "perfil": "Arquiteto de Soluções Especialista",
+      "horaHO": 269.71,
+      "mensalHO": 45311.28,
+      "horaHib": 296.681,
+      "mensalHib": 49842.407999999996
+    },
+    {
+      "perfil": "Arquiteto de Soluções Pleno",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "Arquiteto de Soluções Sênior",
+      "horaHO": 236,
+      "mensalHO": 39648,
+      "horaHib": 259.6,
+      "mensalHib": 43612.8
+    },
+    {
+      "perfil": "Cientista de Dados Especialista",
+      "horaHO": 264.39,
+      "mensalHO": 44417.52,
+      "horaHib": 290.829,
+      "mensalHib": 48859.272000000004
+    },
+    {
+      "perfil": "Cientista de Dados Júnior",
+      "horaHO": 104.71,
+      "mensalHO": 17591.28,
+      "horaHib": 115.181,
+      "mensalHib": 19350.408
+    },
+    {
+      "perfil": "Cientista de Dados Pleno",
+      "horaHO": 157.93,
+      "mensalHO": 26532.24,
+      "horaHib": 173.723,
+      "mensalHib": 29185.464000000004
+    },
+    {
+      "perfil": "Cientista de Dados Sênior",
+      "horaHO": 234.23,
+      "mensalHO": 39350.64,
+      "horaHib": 257.653,
+      "mensalHib": 43285.704000000005
+    },
+    {
+      "perfil": "DBA - Administrador de Banco de Dados Especialista",
+      "horaHO": 260.84,
+      "mensalHO": 43821.119999999995,
+      "horaHib": 286.924,
+      "mensalHib": 48203.231999999996
+    },
+    {
+      "perfil": "DBA - Administrador de Banco de Dados Júnior",
+      "horaHO": 83.42,
+      "mensalHO": 14014.56,
+      "horaHib": 91.762,
+      "mensalHib": 15416.016
+    },
+    {
+      "perfil": "DBA - Administrador de Banco de Dados Pleno",
+      "horaHO": 127.77,
+      "mensalHO": 21465.36,
+      "horaHib": 140.547,
+      "mensalHib": 23611.896
+    },
+    {
+      "perfil": "DBA - Administrador de Banco de Dados Sênior",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "Desenvolvedor BackEnd Especialista",
+      "horaHO": 243.1,
+      "mensalHO": 40840.799999999996,
+      "horaHib": 267.40999999999997,
+      "mensalHib": 44924.88
+    },
+    {
+      "perfil": "Desenvolvedor BackEnd Júnior",
+      "horaHO": 99.38,
+      "mensalHO": 16695.84,
+      "horaHib": 109.318,
+      "mensalHib": 18365.424
+    },
+    {
+      "perfil": "Desenvolvedor BackEnd Pleno",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "Desenvolvedor BackEnd Sênior",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Desenvolvedor FrontEnd Especialista",
+      "horaHO": 243.1,
+      "mensalHO": 40840.799999999996,
+      "horaHib": 267.40999999999997,
+      "mensalHib": 44924.88
+    },
+    {
+      "perfil": "Desenvolvedor FrontEnd Júnior",
+      "horaHO": 99.38,
+      "mensalHO": 16695.84,
+      "horaHib": 109.318,
+      "mensalHib": 18365.424
+    },
+    {
+      "perfil": "Desenvolvedor FrontEnd Pleno",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "Desenvolvedor FrontEnd Sênior",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Desenvolvedor FullStack Especialista",
+      "horaHO": 253.74,
+      "mensalHO": 42628.32,
+      "horaHib": 279.11400000000003,
+      "mensalHib": 46891.152
+    },
+    {
+      "perfil": "Desenvolvedor FullStack Júnior",
+      "horaHO": 99.38,
+      "mensalHO": 16695.84,
+      "horaHib": 109.318,
+      "mensalHib": 18365.424
+    },
+    {
+      "perfil": "Desenvolvedor FullStack Pleno",
+      "horaHO": 179.23,
+      "mensalHO": 30110.64,
+      "horaHib": 197.153,
+      "mensalHib": 33121.704
+    },
+    {
+      "perfil": "Desenvolvedor FullStack Sênior",
+      "horaHO": 216.49,
+      "mensalHO": 36370.32,
+      "horaHib": 238.139,
+      "mensalHib": 40007.352
+    },
+    {
+      "perfil": "Desenvolvedor Mobile Especialista",
+      "horaHO": 253.74,
+      "mensalHO": 42628.32,
+      "horaHib": 279.11400000000003,
+      "mensalHib": 46891.152
+    },
+    {
+      "perfil": "Desenvolvedor Mobile Júnior",
+      "horaHO": 99.38,
+      "mensalHO": 16695.84,
+      "horaHib": 109.318,
+      "mensalHib": 18365.424
+    },
+    {
+      "perfil": "Desenvolvedor Mobile Pleno",
+      "horaHO": 179.23,
+      "mensalHO": 30110.64,
+      "horaHib": 197.153,
+      "mensalHib": 33121.704
+    },
+    {
+      "perfil": "Desenvolvedor Mobile Sênior",
+      "horaHO": 216.49,
+      "mensalHO": 36370.32,
+      "horaHib": 238.139,
+      "mensalHib": 40007.352
+    },
+    {
+      "perfil": "Desenvolvedor Salesforce Especialista",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Desenvolvedor Salesforce Júnior",
+      "horaHO": 92.29,
+      "mensalHO": 15504.720000000001,
+      "horaHib": 101.519,
+      "mensalHib": 17055.192000000003
+    },
+    {
+      "perfil": "Desenvolvedor Salesforce Pleno",
+      "horaHO": 136.64,
+      "mensalHO": 22955.519999999997,
+      "horaHib": 150.30399999999997,
+      "mensalHib": 25251.071999999996
+    },
+    {
+      "perfil": "Desenvolvedor Salesforce Sênior",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "DevSecOps Especialista",
+      "horaHO": 225.36,
+      "mensalHO": 37860.48,
+      "horaHib": 247.89600000000002,
+      "mensalHib": 41646.528000000006
+    },
+    {
+      "perfil": "DevSecOps Júnior",
+      "horaHO": 99.38,
+      "mensalHO": 16695.84,
+      "horaHib": 109.318,
+      "mensalHib": 18365.424
+    },
+    {
+      "perfil": "DevSecOps Pleno",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "DevSecOps Sênior",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Engenheiro de Cloud (AWS / Azure / GCP) Especialista",
+      "horaHO": 260.84,
+      "mensalHO": 43821.119999999995,
+      "horaHib": 286.924,
+      "mensalHib": 48203.231999999996
+    },
+    {
+      "perfil": "Engenheiro de Cloud (AWS / Azure / GCP) Júnior",
+      "horaHO": 101.16,
+      "mensalHO": 16994.88,
+      "horaHib": 111.276,
+      "mensalHib": 18694.368
+    },
+    {
+      "perfil": "Engenheiro de Cloud (AWS / Azure / GCP) Pleno",
+      "horaHO": 154.39,
+      "mensalHO": 25937.519999999997,
+      "horaHib": 169.82899999999998,
+      "mensalHib": 28531.271999999997
+    },
+    {
+      "perfil": "Engenheiro de Cloud (AWS / Azure / GCP) Sênior",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Engenheiro de Dados Especialista",
+      "horaHO": 216.49,
+      "mensalHO": 36370.32,
+      "horaHib": 238.139,
+      "mensalHib": 40007.352
+    },
+    {
+      "perfil": "Engenheiro de Dados Júnior",
+      "horaHO": 92.29,
+      "mensalHO": 15504.720000000001,
+      "horaHib": 101.519,
+      "mensalHib": 17055.192000000003
+    },
+    {
+      "perfil": "Engenheiro de Dados Pleno",
+      "horaHO": 145.51,
+      "mensalHO": 24445.68,
+      "horaHib": 160.06099999999998,
+      "mensalHib": 26890.247999999996
+    },
+    {
+      "perfil": "Engenheiro de Dados Sênior",
+      "horaHO": 189.87,
+      "mensalHO": 31898.16,
+      "horaHib": 208.857,
+      "mensalHib": 35087.976
+    },
+    {
+      "perfil": "Gerente de Projetos Júnior",
+      "horaHO": 118.9,
+      "mensalHO": 19975.2,
+      "horaHib": 130.79000000000002,
+      "mensalHib": 21972.720000000005
+    },
+    {
+      "perfil": "Gerente de Projetos Pleno",
+      "horaHO": 145.51,
+      "mensalHO": 24445.68,
+      "horaHib": 160.06099999999998,
+      "mensalHib": 26890.247999999996
+    },
+    {
+      "perfil": "Gerente de Projetos Sênior",
+      "horaHO": 198.74,
+      "mensalHO": 33388.32,
+      "horaHib": 218.614,
+      "mensalHib": 36727.152
+    },
+    {
+      "perfil": "Machine Learning Engineer Especialista",
+      "horaHO": 278.58,
+      "mensalHO": 46801.439999999995,
+      "horaHib": 306.438,
+      "mensalHib": 51481.583999999995
+    },
+    {
+      "perfil": "Machine Learning Engineer Júnior",
+      "horaHO": 122.45,
+      "mensalHO": 20571.600000000002,
+      "horaHib": 134.695,
+      "mensalHib": 22628.76
+    },
+    {
+      "perfil": "Machine Learning Engineer Pleno",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "Machine Learning Engineer Sênior",
+      "horaHO": 243.1,
+      "mensalHO": 40840.799999999996,
+      "horaHib": 267.40999999999997,
+      "mensalHib": 44924.88
+    },
+    {
+      "perfil": "Product Owner Júnior",
+      "horaHO": 92.29,
+      "mensalHO": 15504.720000000001,
+      "horaHib": 101.519,
+      "mensalHib": 17055.192000000003
+    },
+    {
+      "perfil": "Product Owner Pleno",
+      "horaHO": 181,
+      "mensalHO": 30408,
+      "horaHib": 199.1,
+      "mensalHib": 33448.799999999996
+    },
+    {
+      "perfil": "Product Owner Sênior",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "RPA Especialista",
+      "horaHO": 216.49,
+      "mensalHO": 36370.32,
+      "horaHib": 238.139,
+      "mensalHib": 40007.352
+    },
+    {
+      "perfil": "RPA Júnior",
+      "horaHO": 79.87,
+      "mensalHO": 13418.16,
+      "horaHib": 87.857,
+      "mensalHib": 14759.976
+    },
+    {
+      "perfil": "RPA Pleno",
+      "horaHO": 145.51,
+      "mensalHO": 24445.68,
+      "horaHib": 160.06099999999998,
+      "mensalHib": 26890.247999999996
+    },
+    {
+      "perfil": "RPA Sênior",
+      "horaHO": 189.87,
+      "mensalHO": 31898.16,
+      "horaHib": 208.857,
+      "mensalHib": 35087.976
+    },
+    {
+      "perfil": "Analista SAP Funcional Júnior",
+      "horaHO": 104.71,
+      "mensalHO": 17591.28,
+      "horaHib": 115.181,
+      "mensalHib": 19350.408
+    },
+    {
+      "perfil": "Analista SAP Funcional Pleno",
+      "horaHO": 173.9,
+      "mensalHO": 29215.2,
+      "horaHib": 191.29000000000002,
+      "mensalHib": 32136.720000000005
+    },
+    {
+      "perfil": "Analista SAP Funcional Sênior",
+      "horaHO": 225.36,
+      "mensalHO": 37860.48,
+      "horaHib": 247.89600000000002,
+      "mensalHib": 41646.528000000006
+    },
+    {
+      "perfil": "Scrum Master Júnior",
+      "horaHO": 92.29,
+      "mensalHO": 15504.720000000001,
+      "horaHib": 101.519,
+      "mensalHib": 17055.192000000003
+    },
+    {
+      "perfil": "Scrum Master Pleno",
+      "horaHO": 154.39,
+      "mensalHO": 25937.519999999997,
+      "horaHib": 169.82899999999998,
+      "mensalHib": 28531.271999999997
+    },
+    {
+      "perfil": "Scrum Master Sênior",
+      "horaHO": 198.74,
+      "mensalHO": 33388.32,
+      "horaHib": 218.614,
+      "mensalHib": 36727.152
+    },
+    {
+      "perfil": "SRE - Site Reliability Engenier Especialista",
+      "horaHO": 296.33,
+      "mensalHO": 49783.439999999995,
+      "horaHib": 325.96299999999997,
+      "mensalHib": 54761.78399999999
+    },
+    {
+      "perfil": "SRE - Site Reliability Engenier Júnior",
+      "horaHO": 118.9,
+      "mensalHO": 19975.2,
+      "horaHib": 130.79000000000002,
+      "mensalHib": 21972.720000000005
+    },
+    {
+      "perfil": "SRE - Site Reliability Engenier Pleno",
+      "horaHO": 163.26,
+      "mensalHO": 27427.68,
+      "horaHib": 179.58599999999998,
+      "mensalHib": 30170.447999999997
+    },
+    {
+      "perfil": "SRE - Site Reliability Engenier Sênior",
+      "horaHO": 225.36,
+      "mensalHO": 37860.48,
+      "horaHib": 247.89600000000002,
+      "mensalHib": 41646.528000000006
+    },
+    {
+      "perfil": "Tech Lead Especialista",
+      "horaHO": 269.71,
+      "mensalHO": 45311.28,
+      "horaHib": 296.681,
+      "mensalHib": 49842.407999999996
+    },
+    {
+      "perfil": "Tech Lead Pleno",
+      "horaHO": 198.74,
+      "mensalHO": 33388.32,
+      "horaHib": 218.614,
+      "mensalHib": 36727.152
+    },
+    {
+      "perfil": "Tech Lead Sênior",
+      "horaHO": 243.1,
+      "mensalHO": 40840.799999999996,
+      "horaHib": 267.40999999999997,
+      "mensalHib": 44924.88
+    },
+    {
+      "perfil": "Analista de SI – Gestão de Acessos/ Identidade Júnior",
+      "horaHO": 74.54,
+      "mensalHO": 12522.720000000001,
+      "horaHib": 81.994,
+      "mensalHib": 13774.992
+    },
+    {
+      "perfil": "Analista de SI – Gestão de Acessos/ Identidade Pleno",
+      "horaHO": 97.61,
+      "mensalHO": 16398.48,
+      "horaHib": 107.371,
+      "mensalHib": 18038.327999999998
+    },
+    {
+      "perfil": "Analista de SI – Gestão de Acessos/ Identidade Sênior",
+      "horaHO": 154.39,
+      "mensalHO": 25937.519999999997,
+      "horaHib": 169.82899999999998,
+      "mensalHib": 28531.271999999997
+    },
+    {
+      "perfil": "Analista de Segurança da Informação Especialista",
+      "horaHO": 269.71,
+      "mensalHO": 45311.28,
+      "horaHib": 296.681,
+      "mensalHib": 49842.407999999996
+    },
+    {
+      "perfil": "Analista de Segurança da Informação Júnior",
+      "horaHO": 110.03,
+      "mensalHO": 18485.04,
+      "horaHib": 121.033,
+      "mensalHib": 20333.544
+    },
+    {
+      "perfil": "Analista de Segurança da Informação Pleno",
+      "horaHO": 163.26,
+      "mensalHO": 27427.68,
+      "horaHib": 179.58599999999998,
+      "mensalHib": 30170.447999999997
+    },
+    {
+      "perfil": "Analista de Segurança da Informação Sênior",
+      "horaHO": 243.1,
+      "mensalHO": 40840.799999999996,
+      "horaHib": 267.40999999999997,
+      "mensalHib": 44924.88
+    },
+    {
+      "perfil": "Coordenador de T.I. Sênior",
+      "horaHO": 278.58,
+      "mensalHO": 46801.439999999995,
+      "horaHib": 306.438,
+      "mensalHib": 51481.583999999995
+    },
+    {
+      "perfil": "Consultor SAP SuccessFactors / Ariba Especialista",
+      "horaHO": 456.01,
+      "mensalHO": 76609.68,
+      "horaHib": 501.611,
+      "mensalHib": 84270.648
+    },
+    {
+      "perfil": "Consultor SAP SuccessFactors / Ariba Júnior",
+      "horaHO": 154.39,
+      "mensalHO": 25937.519999999997,
+      "horaHib": 169.82899999999998,
+      "mensalHib": 28531.271999999997
+    },
+    {
+      "perfil": "Consultor SAP SuccessFactors / Ariba Pleno",
+      "horaHO": 260.84,
+      "mensalHO": 43821.119999999995,
+      "horaHib": 286.924,
+      "mensalHib": 48203.231999999996
+    },
+    {
+      "perfil": "Consultor SAP SuccessFactors / Ariba Sênior",
+      "horaHO": 376.17,
+      "mensalHO": 63196.560000000005,
+      "horaHib": 413.78700000000003,
+      "mensalHib": 69516.216
+    },
+    {
+      "perfil": "Consultor SAP MM/SD Especialista",
+      "horaHO": 456.01,
+      "mensalHO": 76609.68,
+      "horaHib": 501.611,
+      "mensalHib": 84270.648
+    },
+    {
+      "perfil": "Consultor SAP MM/SD Júnior",
+      "horaHO": 157.93,
+      "mensalHO": 26532.24,
+      "horaHib": 173.723,
+      "mensalHib": 29185.464000000004
+    },
+    {
+      "perfil": "Consultor SAP MM/SD Pleno",
+      "horaHO": 260.84,
+      "mensalHO": 43821.119999999995,
+      "horaHib": 286.924,
+      "mensalHib": 48203.231999999996
+    },
+    {
+      "perfil": "Consultor SAP MM/SD Sênior",
+      "horaHO": 376.17,
+      "mensalHO": 63196.560000000005,
+      "horaHib": 413.78700000000003,
+      "mensalHib": 69516.216
+    },
+    {
+      "perfil": "Consultor SAP FI/CO Especialista",
+      "horaHO": 526.98,
+      "mensalHO": 88532.64,
+      "horaHib": 579.678,
+      "mensalHib": 97385.904
+    },
+    {
+      "perfil": "Consultor SAP FI/CO Júnior",
+      "horaHO": 168.58,
+      "mensalHO": 28321.440000000002,
+      "horaHib": 185.43800000000002,
+      "mensalHib": 31153.584000000003
+    },
+    {
+      "perfil": "Consultor SAP FI/CO Pleno",
+      "horaHO": 287.46,
+      "mensalHO": 48293.28,
+      "horaHib": 316.20599999999996,
+      "mensalHib": 53122.60799999999
+    },
+    {
+      "perfil": "Consultor SAP FI/CO Sênior",
+      "horaHO": 385.04,
+      "mensalHO": 64686.72,
+      "horaHib": 423.54400000000004,
+      "mensalHib": 71155.392
+    },
+    {
+      "perfil": "Consultor SAP ABAP Especialista",
+      "horaHO": 509.24,
+      "mensalHO": 85552.32,
+      "horaHib": 560.164,
+      "mensalHib": 94107.552
+    },
+    {
+      "perfil": "Consultor SAP ABAP Júnior",
+      "horaHO": 163.26,
+      "mensalHO": 27427.68,
+      "horaHib": 179.58599999999998,
+      "mensalHib": 30170.447999999997
+    },
+    {
+      "perfil": "Consultor SAP ABAP Pleno",
+      "horaHO": 278.58,
+      "mensalHO": 46801.439999999995,
+      "horaHib": 306.438,
+      "mensalHib": 51481.583999999995
+    },
+    {
+      "perfil": "Consultor SAP ABAP Sênior",
+      "horaHO": 385.04,
+      "mensalHO": 64686.72,
+      "horaHib": 423.54400000000004,
+      "mensalHib": 71155.392
+    },
+    {
+      "perfil": "Consultor SAP EWM Especialista",
+      "horaHO": 509.24,
+      "mensalHO": 85552.32,
+      "horaHib": 560.164,
+      "mensalHib": 94107.552
+    },
+    {
+      "perfil": "Consultor SAP EWM Júnior",
+      "horaHO": 172.13,
+      "mensalHO": 28917.84,
+      "horaHib": 189.343,
+      "mensalHib": 31809.624
+    },
+    {
+      "perfil": "Consultor SAP EWM Pleno",
+      "horaHO": 306.97,
+      "mensalHO": 51570.96000000001,
+      "horaHib": 337.66700000000003,
+      "mensalHib": 56728.056000000004
+    },
+    {
+      "perfil": "Consultor SAP EWM Sênior",
+      "horaHO": 399.23,
+      "mensalHO": 67070.64,
+      "horaHib": 439.153,
+      "mensalHib": 73777.704
+    },
+    {
+      "perfil": "Consultor Oracle Netsuite Especialista",
+      "horaHO": 438.27,
+      "mensalHO": 73629.36,
+      "horaHib": 482.097,
+      "mensalHib": 80992.296
+    },
+    {
+      "perfil": "Consultor Oracle Netsuite Júnior",
+      "horaHO": 111.8,
+      "mensalHO": 18782.399999999998,
+      "horaHib": 122.97999999999999,
+      "mensalHib": 20660.64
+    },
+    {
+      "perfil": "Consultor Oracle Netsuite Pleno",
+      "horaHO": 207.61,
+      "mensalHO": 34878.48,
+      "horaHib": 228.371,
+      "mensalHib": 38366.328
+    },
+    {
+      "perfil": "Consultor Oracle Netsuite Sênior",
+      "horaHO": 367.3,
+      "mensalHO": 61706.4,
+      "horaHib": 404.03000000000003,
+      "mensalHib": 67877.04000000001
+    },
+    {
+      "perfil": "Analista de Qualidade Automatizador Especialista",
+      "horaHO": 225.36,
+      "mensalHO": 37860.48,
+      "horaHib": 247.89600000000002,
+      "mensalHib": 41646.528000000006
+    },
+    {
+      "perfil": "Analista de Qualidade Automatizador Júnior",
+      "horaHO": 86.96,
+      "mensalHO": 14609.279999999999,
+      "horaHib": 95.65599999999999,
+      "mensalHib": 16070.207999999999
+    },
+    {
+      "perfil": "Analista de Qualidade Automatizador Pleno",
+      "horaHO": 145.51,
+      "mensalHO": 24445.68,
+      "horaHib": 160.06099999999998,
+      "mensalHib": 26890.247999999996
+    },
+    {
+      "perfil": "Analista de Qualidade Automatizador Sênior",
+      "horaHO": 189.87,
+      "mensalHO": 31898.16,
+      "horaHib": 208.857,
+      "mensalHib": 35087.976
+    },
+    {
+      "perfil": "Especialista LTMC (Líder Técnico) Especialista",
+      "horaHO": 438.27,
+      "mensalHO": 73629.36,
+      "horaHib": 482.097,
+      "mensalHib": 80992.296
+    },
+    {
+      "perfil": "Especialista LTMC Especialista",
+      "horaHO": 402.78,
+      "mensalHO": 67667.04,
+      "horaHib": 443.058,
+      "mensalHib": 74433.744
+    },
+    {
+      "perfil": "Especialista ETL / Oracle EBS Especialista",
+      "horaHO": 367.3,
+      "mensalHO": 61706.4,
+      "horaHib": 404.03000000000003,
+      "mensalHib": 67877.04000000001
+    },
+    {
+      "perfil": "Especialista DQ / DQA Especialista",
+      "horaHO": 438.27,
+      "mensalHO": 73629.36,
+      "horaHib": 482.097,
+      "mensalHib": 80992.296
+    }
+  ]
+}

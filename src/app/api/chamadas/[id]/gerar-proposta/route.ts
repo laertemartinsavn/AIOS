@@ -84,9 +84,12 @@ export async function POST(req: Request, { params }: Ctx) {
 
     // Ratecard para cálculo de investimento — usa a aba CLT ou PJ conforme selecionado
     let ratecard: string | undefined;
+    let ratecardLinhas: ReturnType<typeof lerLinhasRatecard> = [];
     try {
+      ratecardLinhas = lerLinhasRatecard(modalidade);
       const rc = lerRatecard(modalidade);
       if (rc) ratecard = rc;
+      console.log(`[gerar-proposta] ratecard carregado: ${ratecardLinhas.length} perfis (${modalidade}). Primeiros: ${ratecardLinhas.slice(0, 3).map(l => l.perfil).join(", ")}`);
     } catch (err) {
       console.error("[ratecard] falha ao ler planilha:", err);
     }
@@ -161,6 +164,18 @@ export async function POST(req: Request, { params }: Ctx) {
           modelo.id,
           propostaIA.conteudo_secoes.investimento,
         );
+
+        // Append ratecard values summary to notas_geracao for auditability
+        const linhasRatecard = calc.itens.map(i =>
+          `  - ${i.perfil_ratecard} (qtde ${i.quantidade}, ${i.horas_mensais}h/mês)` +
+          ` → R$/mês 168h: R$${i.tarifa_mensal_168.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}` +
+          ` | proporcional: R$${i.tarifa_mensal_proporcional.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}` +
+          ` | subtotal: R$${i.subtotal.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}` +
+          (i.encontrado ? "" : " ⚠️ perfil não encontrado no ratecard")
+        ).join("\n");
+        const valorTotal = `R$${calc.valor_total.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}`;
+        const ratecardResume = `\n\n---\n## VALORES CAPTURADOS DO RATECARD (calculado pelo sistema)\n\n**Modalidade:** ${modalidade} | **Regime:** ${regime} | **Ratecard:** ${ratecardLinhas.length} perfis carregados\n\n${linhasRatecard}\n\n**TOTAL: ${valorTotal}**`;
+        propostaIA.conteudo_secoes.notas_geracao = (propostaIA.conteudo_secoes.notas_geracao ?? "") + ratecardResume;
       }
     } else {
       console.warn("[gerar-proposta] AVISO: perfis_selecionados vazio ou não preenchido pela IA");

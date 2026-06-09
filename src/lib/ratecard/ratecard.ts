@@ -1,5 +1,7 @@
 import * as XLSX from "xlsx";
 import path from "path";
+import fs from "fs";
+import ratecardJson from "./ratecard-data.json";
 
 function brl(n: number): string {
   const s = n.toFixed(2).replace(".", ",");
@@ -22,36 +24,41 @@ export function lerLinhasRatecard(modalidade: "CLT" | "PJ" = "PJ"): LinhaRatecar
     "Rate Card - PJ e CLT - Oficial.xlsx",
   );
 
-  let wb: XLSX.WorkBook;
+  // Tenta ler o Excel via buffer (evita problema de bundling com Turbopack)
   try {
-    wb = XLSX.readFile(arquivo);
+    const buf = fs.readFileSync(arquivo);
+    const wb = XLSX.read(buf, { type: "buffer" });
+
+    const nomeAba = modalidade === "CLT" ? "Rate Formatado CLT" : "Rate Formatado PJ";
+    const ws = wb.Sheets[nomeAba];
+    if (!ws) throw new Error(`Aba "${nomeAba}" não encontrada`);
+
+    const data = XLSX.utils.sheet_to_json<(string | number)[]>(ws, { header: 1, defval: "" });
+    const linhas: LinhaRatecard[] = [];
+
+    for (const row of data.slice(4)) {
+      const perfil = String(row[0] ?? "").trim();
+      const horaHO = Number(row[1]);
+      const mensalHO = Number(row[2]);
+      const horaHib = Number(row[3]);
+      const mensalHib = Number(row[4]);
+      if (!perfil || !horaHO || horaHO <= 0) continue;
+      linhas.push({ perfil, horaHO, mensalHO, horaHib, mensalHib });
+    }
+
+    if (linhas.length > 0) return linhas;
+    throw new Error("Nenhuma linha lida do Excel");
   } catch (err) {
-    console.error("[lerLinhasRatecard] falha ao ler arquivo:", arquivo, String(err));
+    // Fallback: JSON gerado a partir do Excel (atualizar com npm run update-ratecard)
+    console.warn("[lerLinhasRatecard] usando JSON fallback:", String(err));
+    const dados = ratecardJson[modalidade] as LinhaRatecard[] | undefined;
+    if (dados && dados.length > 0) {
+      console.log("[lerLinhasRatecard] JSON fallback carregado:", dados.length, "perfis");
+      return dados;
+    }
+    console.error("[lerLinhasRatecard] falha crítica: nem Excel nem JSON fallback disponíveis");
     return [];
   }
-
-  const nomeAba = modalidade === "CLT" ? "Rate Formatado CLT" : "Rate Formatado PJ";
-  const ws = wb.Sheets[nomeAba];
-  if (!ws) return [];
-
-  const data = XLSX.utils.sheet_to_json<(string | number)[]>(ws, { header: 1, defval: "" });
-
-  const linhas: LinhaRatecard[] = [];
-
-  // Dados começam na linha 5 (índice 4), após os cabeçalhos
-  for (const row of data.slice(4)) {
-    const perfil = String(row[0] ?? "").trim();
-    const horaHO = Number(row[1]);   // coluna B — tarifa home office R$/hora
-    const mensalHO = Number(row[2]); // coluna C — tarifa home office R$/mês
-    const horaHib = Number(row[3]);  // coluna D — tarifa híbrido/presencial R$/hora
-    const mensalHib = Number(row[4]);// coluna E — tarifa híbrido/presencial R$/mês
-
-    if (!perfil || !horaHO || horaHO <= 0) continue;
-
-    linhas.push({ perfil, horaHO, mensalHO, horaHib, mensalHib });
-  }
-
-  return linhas;
 }
 
 export type ItemCalculado = {
